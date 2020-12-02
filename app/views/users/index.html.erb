@@ -1,1 +1,5 @@
 <h1> <%= @users.count %> <h1>
+
+<% if current_user %>
+<%= self.current_user.user_name %>
+<% end %>

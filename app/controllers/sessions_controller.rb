@@ -3,8 +3,18 @@ class SessionsController < ApplicationController
     end
   
     def create
+        user = User.find_by_user_name(params[:session][:user_name].downcase)
+        if user 
+            session[:user_id] = user.id
+            redirect_to root_path, notice: "Logged in!"
+        else
+          flash.now[:error] = 'Invalid email/password combination'
+          render 'new'
+        end
     end
   
     def destroy
-    end
+        session[:user_id] = nil
+        redirect_to root_path, notice: "Signned out!"
+      end
 end

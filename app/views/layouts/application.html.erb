@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ZrEvents</title>
+    <title>Private Events</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -18,6 +18,12 @@
   <body>
   <%= render "layouts/header", :user => @user %>
 
+
+<div class="container">
+<% if notice %>
+  <%= render "layouts/alerts" %>
+<% end %>
+</div>
    
     <%= yield %>
 
