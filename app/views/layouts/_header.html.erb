@@ -1,1 +1,16 @@
-<%= link_to "Home", root_path, class:"navbar-brand"%>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li>
+              <%= link_to 'Home', root_path, class: "navbar-brand " %>
+            </li>
+            <li >
+                 <%= link_to 'New User', new_user_path, class:"navbar-brand" %>  
+            </li>
+         
+       
+        </ul>
+      </div>
+    </nav>
