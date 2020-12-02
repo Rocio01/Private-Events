@@ -1,5 +1,29 @@
 <h1> <%= @users.count %> <h1>
 
+<table class="table h6">
+  <thead>
+    <tr>
+      <th scope="col">User name </th>
+      <th scope="col"> </th>
+      <th scope="col"> </th>
+    </tr>
+  </thead>
+  <tbody>
+      <% @users.each do |user|%>
+        <tr>
+            <th><%= user.user_name %> </th>
+            <th><%= link_to "show", user_path(user.id) %> </th>
+            
+            <th><%= link_to "delete", user_path(user.id), data: {method: :delete, confirm: "Are you sure?"} %> </th>
+        </tr>
+     <% end%>
+   
+  </tbody>
+</table>
+
+
+
+
 <% if current_user %>
 <%= self.current_user.user_name %>
 <% end %>
