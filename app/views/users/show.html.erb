@@ -1,1 +1,20 @@
 <%= @user.user_name %>
+
+<table class="table h6">
+  <thead>
+    <tr>
+      <th scope="col"> Events </th>
+    </tr>
+  </thead>
+  <tbody>
+      <% @user.events.each do |event|%>
+        <tr>
+            <th><%= event.title %> </th>
+            <%# <th><%= link_to "show", user_path(user.id) </th> %>
+            
+        </tr>
+     <% end%>
+   
+  </tbody>
+</table>
+
