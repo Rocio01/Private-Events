@@ -5,16 +5,20 @@ class EnrollmentsController < ApplicationController
     end
     
     def new
-
+        @enrollment = Enrollment.new
+    end
+    
+    
+    def show
+        @event = Event.find(params[:id])
+         @event.attendees << current_user
+         redirect_to @event
     end
 
     def create
         
     end
 
-    def show
-
-    end
 
 
 end
