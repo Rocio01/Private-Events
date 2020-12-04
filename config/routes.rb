@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :events
+  resources :enrollments
   # get 'home/index'
   root "users#index"
   # get "users" => "users#index"
