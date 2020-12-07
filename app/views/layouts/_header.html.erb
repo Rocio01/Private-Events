@@ -12,6 +12,9 @@
              <li >
                  <%= link_to 'Sign in', new_session_path, class:"navbar-brand" %>  
             </li>
+            <li >
+                 <%= link_to 'Events', events_path, class:"navbar-brand" %>  
+            </li>
            <% if current_user %>
            <%= link_to "Sign out", signout_path, class:"navbar-brand"  %>
            <% end %>

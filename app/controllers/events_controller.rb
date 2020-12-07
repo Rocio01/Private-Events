@@ -14,8 +14,8 @@ class EventsController < ApplicationController
 
   # GET /events/new
   def new
-     @event = Event.new
-    # @event = current_user.events.build(event_params)
+    @event = Event.new
+    
   end
 
   # GET /events/1/edit
