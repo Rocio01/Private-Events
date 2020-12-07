@@ -1,5 +1,5 @@
-Started GET "/" for 127.0.0.1 at 2020-12-06 21:45:59 +0530
-  [1m[35m (33.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/" for 127.0.0.1 at 2020-12-07 19:44:47 +0530
+  [1m[35m (9.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   
 ActiveRecord::PendingMigrationError (
 
@@ -9,95 +9,972 @@ Migrations are pending. To resolve this issue, run:
 
 ):
   
-activerecord (6.0.3.4) lib/active_record/migration.rb:586:in `check_pending!'
-activerecord (6.0.3.4) lib/active_record/migration.rb:564:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
-activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
-web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
-web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
-web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
-web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
-railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
-activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
-railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+activerecord (6.0.3.3) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.3) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
 sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
 rack (2.2.3) lib/rack/method_override.rb:24:in `call'
 rack (2.2.3) lib/rack/runtime.rb:22:in `call'
-activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
 rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
-actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
 webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
 rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
-railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
-puma (4.3.7) lib/puma/configuration.rb:228:in `call'
-puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
-puma (4.3.7) lib/puma/server.rb:472:in `process_client'
-puma (4.3.7) lib/puma/server.rb:328:in `block in run'
-puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-Started POST "/rails/actions" for 127.0.0.1 at 2020-12-06 21:46:04 +0530
-  [1m[35m (164.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
-  [1m[35m (146.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/rails/actions" for 127.0.0.1 at 2020-12-07 19:44:52 +0530
+  [1m[35m (162.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (143.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Migrating to CreateUsers (20201201173055)
-  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
-  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201201173055"]]
-  [1m[35m (138.4ms)[0m  [1m[36mcommit transaction[0m
-Migrating to CreateEvents (20201203194958)
+Migrating to CreateUsers (20201001160017)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "title" varchar, "description" text, "event_date" date, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_0cb5590091"
-FOREIGN KEY ("user_id")
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201001160017"]]
+  [1m[35m (159.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEvents (20201001162216)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (19.1ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "location" varchar, "date" datetime, "creator_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_15c34a9137"
+FOREIGN KEY ("creator_id")
   REFERENCES "users" ("id")
 )[0m
-  [1m[35m (11.7ms)[0m  [1m[35mCREATE  INDEX "index_events_on_user_id" ON "events" ("user_id")[0m
-  [1m[36mprimary::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201203194958"]]
-  [1m[35m (139.1ms)[0m  [1m[36mcommit transaction[0m
-Migrating to CreateEnrollments (20201203215854)
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_events_on_creator_id" ON "events" ("creator_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201001162216"]]
+  [1m[35m (101.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAttendances (20201001170527)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "enrollments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "event_id" integer NOT NULL, "user_id" integer NOT NULL, "category" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_a6378ee767"
-FOREIGN KEY ("event_id")
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "attendances" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "attendee_id" integer, "attended_event_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_a07acd73a1"
+FOREIGN KEY ("attendee_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_f4f2318f10"
+FOREIGN KEY ("attended_event_id")
   REFERENCES "events" ("id")
-, CONSTRAINT "fk_rails_e860e0e46b"
-FOREIGN KEY ("user_id")
-  REFERENCES "users" ("id")
 )[0m
-  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_enrollments_on_event_id" ON "enrollments" ("event_id")[0m
-  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_enrollments_on_user_id" ON "enrollments" ("user_id")[0m
-  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201203215854"]]
-  [1m[35m (131.3ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_attendances_on_attendee_id" ON "attendances" ("attendee_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_attendances_on_attended_event_id" ON "attendances" ("attended_event_id")[0m
+  [1m[36mprimary::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201001170527"]]
+  [1m[35m (113.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (8.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mActiveRecord::InternalMetadata Create (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-06 16:16:06.341054"], ["updated_at", "2020-12-06 16:16:06.341054"]]
-  [1m[35m (119.4ms)[0m  [1m[36mcommit transaction[0m
-Started GET "/" for 127.0.0.1 at 2020-12-06 21:46:06 +0530
+  [1m[36mActiveRecord::InternalMetadata Create (28.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-07 14:14:53.840333"], ["updated_at", "2020-12-07 14:14:53.840333"]]
+  [1m[35m (179.3ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-12-07 19:44:54 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 12ms (ActiveRecord: 0.0ms | Allocations: 742)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-12-07 19:44:54 +0530
+Processing by SessionsController#new as HTML
+Completed 406 Not Acceptable in 35ms (ActiveRecord: 0.0ms | Allocations: 1991)
+
+
+  
+ActionController::MissingExactTemplate (SessionsController#new is missing a template for request formats: text/html):
+  
+actionpack (6.0.3.3) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3.3) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.3) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.3) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.3) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2020-12-07 19:44:59 +0530
+Processing by SessionsController#new as HTML
+Completed 406 Not Acceptable in 3ms (ActiveRecord: 0.0ms | Allocations: 645)
+
+
+  
+ActionController::MissingExactTemplate (SessionsController#new is missing a template for request formats: text/html):
+  
+actionpack (6.0.3.3) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3.3) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.3) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.3) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.3) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2020-12-07 19:45:08 +0530
+Processing by SessionsController#new as HTML
+Completed 406 Not Acceptable in 4ms (ActiveRecord: 0.0ms | Allocations: 642)
+
+
+  
+ActionController::MissingExactTemplate (SessionsController#new is missing a template for request formats: text/html):
+  
+actionpack (6.0.3.3) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3.3) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.3) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.3) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.3) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-12-07 19:45:17 +0530
+Processing by EventsController#index as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 260)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-12-07 19:45:17 +0530
+Processing by SessionsController#new as HTML
+Completed 406 Not Acceptable in 6ms (ActiveRecord: 0.0ms | Allocations: 645)
+
+
+  
+ActionController::MissingExactTemplate (SessionsController#new is missing a template for request formats: text/html):
+  
+actionpack (6.0.3.3) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3.3) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.3) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.3) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.3) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2020-12-07 19:45:36 +0530
+Processing by SessionsController#new as HTML
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 642)
+
+
+  
+ActionController::MissingExactTemplate (SessionsController#new is missing a template for request formats: text/html):
+  
+actionpack (6.0.3.3) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3.3) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.3) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.3) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.3) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/login" for ::1 at 2020-12-07 19:46:02 +0530
+Processing by SessionsController#new as HTML
+Completed 406 Not Acceptable in 2ms (ActiveRecord: 0.0ms | Allocations: 645)
+
+
+  
+ActionController::MissingExactTemplate (SessionsController#new is missing a template for request formats: text/html):
+  
+actionpack (6.0.3.3) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3.3) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.3) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.3) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.3) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/login" for ::1 at 2020-12-07 19:46:13 +0530
+Processing by SessionsController#new as HTML
+Completed 406 Not Acceptable in 4ms (ActiveRecord: 0.0ms | Allocations: 642)
+
+
+  
+ActionController::MissingExactTemplate (SessionsController#new is missing a template for request formats: text/html):
+  
+actionpack (6.0.3.3) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3.3) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.3) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.3) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.3) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/login" for ::1 at 2020-12-07 19:46:16 +0530
+Processing by SessionsController#new as HTML
+Completed 406 Not Acceptable in 2ms (ActiveRecord: 0.0ms | Allocations: 641)
+
+
+  
+ActionController::MissingExactTemplate (SessionsController#new is missing a template for request formats: text/html):
+  
+actionpack (6.0.3.3) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3.3) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.3) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.3) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.3) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/login" for ::1 at 2020-12-07 19:46:19 +0530
+Processing by SessionsController#new as HTML
+Completed 406 Not Acceptable in 2ms (ActiveRecord: 0.0ms | Allocations: 641)
+
+
+  
+ActionController::MissingExactTemplate (SessionsController#new is missing a template for request formats: text/html):
+  
+actionpack (6.0.3.3) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3.3) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.3) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.3) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.3) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/login" for ::1 at 2020-12-07 19:46:22 +0530
+Processing by SessionsController#new as HTML
+Completed 406 Not Acceptable in 2ms (ActiveRecord: 0.0ms | Allocations: 641)
+
+
+  
+ActionController::MissingExactTemplate (SessionsController#new is missing a template for request formats: text/html):
+  
+actionpack (6.0.3.3) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3.3) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.3) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.3) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.3) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/login" for ::1 at 2020-12-07 19:51:34 +0530
+Processing by SessionsController#new as HTML
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 642)
+
+
+  
+ActionController::MissingExactTemplate (SessionsController#new is missing a template for request formats: text/html):
+  
+actionpack (6.0.3.3) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3.3) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.3) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.3) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.3) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.3) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/login" for ::1 at 2020-12-07 19:59:26 +0530
+  [1m[35m (8.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by UsersController#index as HTML
-  Rendering users/index.html.erb within layouts/application
-  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
-  ↳ app/views/users/index.html.erb:1
-  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
-  ↳ app/views/users/index.html.erb:12
-  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-  Rendered users/index.html.erb within layouts/application (Duration: 139.5ms | Allocations: 2478)
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 541)
 [Webpacker] Compiling...
-[Webpacker] Compiled all packs in C:/Users/conne/OneDrive/Desktop/Private-Events/public/packs
+[Webpacker] Compiled all packs in C:/Users/conne/OneDrive/Desktop/private-events/public/packs
 [Webpacker] Hash: 15d1bb7b54cf6326b9ba
 Version: webpack 4.44.2
-Time: 6125ms
-Built at: 06/12/2020 9:46:20 pm
+Time: 4526ms
+Built at: 07/12/2020 7:59:39 pm
                                      Asset       Size       Chunks                         Chunk Names
     js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
 js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
@@ -109,676 +986,166 @@ Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9
 [./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
     + 3 hidden modules
 
-  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-  Rendered layouts/_header.html.erb (Duration: 35.8ms | Allocations: 1024)
-Completed 200 OK in 14063ms (Views: 13758.0ms | ActiveRecord: 5.8ms | Allocations: 46773)
+Completed 200 OK in 14291ms (Views: 14247.5ms | ActiveRecord: 0.0ms | Allocations: 382759)
 
 
-Started GET "/" for 127.0.0.1 at 2020-12-06 21:46:27 +0530
-Processing by UsersController#index as HTML
-  Rendering users/index.html.erb within layouts/application
-  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
-  ↳ app/views/users/index.html.erb:1
-  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
-  ↳ app/views/users/index.html.erb:12
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-  Rendered users/index.html.erb within layouts/application (Duration: 74.9ms | Allocations: 1920)
-[Webpacker] Everything's up-to-date. Nothing to do
-  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-  Rendered layouts/_header.html.erb (Duration: 5.5ms | Allocations: 772)
-Completed 200 OK in 149ms (Views: 146.0ms | ActiveRecord: 1.6ms | Allocations: 8018)
-
-
-Started GET "/users/new" for 127.0.0.1 at 2020-12-06 21:46:29 +0530
+Started GET "/signup" for ::1 at 2020-12-07 19:59:49 +0530
 Processing by UsersController#new as HTML
   Rendering users/new.html.erb within layouts/application
-  Rendered users/_form.html.erb (Duration: 518.6ms | Allocations: 7004)
-  Rendered users/new.html.erb within layouts/application (Duration: 536.3ms | Allocations: 7370)
-[Webpacker] Everything's up-to-date. Nothing to do
-  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-  Rendered layouts/_header.html.erb (Duration: 7.5ms | Allocations: 818)
-Completed 200 OK in 642ms (Views: 627.4ms | ActiveRecord: 1.8ms | Allocations: 15529)
-
-
-Started POST "/users" for 127.0.0.1 at 2020-12-06 21:46:34 +0530
-Processing by UsersController#create as HTML
-  Parameters: {"authenticity_token"=>"b6G22p+89zfPUpXCtezv61FNXi02ZZBvhWUh+8vLzvBtofLYLiQ0x9uXQfloLBx8wVmoMrOfjr4UpvdrRV745A==", "user"=>{"user_name"=>"hi"}, "commit"=>"Create my account"}
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  ↳ app/controllers/users_controller.rb:15:in `create'
-  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."user_name" = ? LIMIT ?[0m  [["user_name", "hi"], ["LIMIT", 1]]
-  ↳ app/controllers/users_controller.rb:15:in `create'
-  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("user_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_name", "hi"], ["created_at", "2020-12-06 16:16:34.599930"], ["updated_at", "2020-12-06 16:16:34.599930"]]
-  ↳ app/controllers/users_controller.rb:15:in `create'
-  [1m[35m (196.8ms)[0m  [1m[36mcommit transaction[0m
-  ↳ app/controllers/users_controller.rb:15:in `create'
-Redirected to http://127.0.0.1:3000/users
-Completed 302 Found in 364ms (ActiveRecord: 198.9ms | Allocations: 4053)
-
-
-Started GET "/users" for 127.0.0.1 at 2020-12-06 21:46:35 +0530
-Processing by UsersController#index as HTML
-  Rendering users/index.html.erb within layouts/application
-  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
-  ↳ app/views/users/index.html.erb:1
-  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
-  ↳ app/views/users/index.html.erb:12
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-  Rendered users/index.html.erb within layouts/application (Duration: 42.9ms | Allocations: 2015)
-[Webpacker] Everything's up-to-date. Nothing to do
-  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-  Rendered layouts/_header.html.erb (Duration: 13.6ms | Allocations: 763)
-Completed 200 OK in 124ms (Views: 121.4ms | ActiveRecord: 1.8ms | Allocations: 8076)
-
-
-Started GET "/users/1" for 127.0.0.1 at 2020-12-06 21:46:41 +0530
-Processing by UsersController#show as HTML
-  Parameters: {"id"=>"1"}
-  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/users_controller.rb:26:in `show'
-  Rendering users/show.html.erb within layouts/application
-  [1m[36mEvent Load (2.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."creator_id" = ?[0m  [["creator_id", 1]]
-  ↳ app/views/users/show.html.erb:10
-  Rendered users/show.html.erb within layouts/application (Duration: 874.1ms | Allocations: 9110)
-Completed 500 Internal Server Error in 897ms (ActiveRecord: 5.6ms | Allocations: 10386)
-
-
-  
-ActionView::Template::Error (SQLite3::SQLException: no such column: events.creator_id):
-     7:     </tr>
-     8:   </thead>
-     9:   <tbody>
-    10:       <% @user.events.each do |event|%>
-    11:         <tr>
-    12:             <th><%= event.title %> </th>
-    13:             <%# <th><%= link_to "show", user_path(user.id) </th> %>
-  
-app/views/users/show.html.erb:10
-Started GET "/users/1" for 127.0.0.1 at 2020-12-06 21:46:43 +0530
-Processing by UsersController#show as HTML
-  Parameters: {"id"=>"1"}
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/users_controller.rb:26:in `show'
-  Rendering users/show.html.erb within layouts/application
-  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."creator_id" = ?[0m  [["creator_id", 1]]
-  ↳ app/views/users/show.html.erb:10
-  Rendered users/show.html.erb within layouts/application (Duration: 7.7ms | Allocations: 2150)
-Completed 500 Internal Server Error in 33ms (ActiveRecord: 1.2ms | Allocations: 3145)
-
-
-  
-ActionView::Template::Error (SQLite3::SQLException: no such column: events.creator_id):
-     7:     </tr>
-     8:   </thead>
-     9:   <tbody>
-    10:       <% @user.events.each do |event|%>
-    11:         <tr>
-    12:             <th><%= event.title %> </th>
-    13:             <%# <th><%= link_to "show", user_path(user.id) </th> %>
-  
-app/views/users/show.html.erb:10
-Started GET "/users" for 127.0.0.1 at 2020-12-06 21:46:48 +0530
-Processing by UsersController#index as HTML
-  Rendering users/index.html.erb within layouts/application
-  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
-  ↳ app/views/users/index.html.erb:1
-  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
-  ↳ app/views/users/index.html.erb:12
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-  Rendered users/index.html.erb within layouts/application (Duration: 36.7ms | Allocations: 2007)
-[Webpacker] Everything's up-to-date. Nothing to do
-  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-  Rendered layouts/_header.html.erb (Duration: 21.5ms | Allocations: 765)
-Completed 200 OK in 142ms (Views: 137.8ms | ActiveRecord: 3.1ms | Allocations: 8110)
-
-
-Started DELETE "/users/1" for 127.0.0.1 at 2020-12-06 21:46:52 +0530
-Processing by UsersController#destroy as HTML
-  Parameters: {"authenticity_token"=>"oXHQZW6ekR7KS687Soo1t9vo+hoetwwv/I0xti4DCdTyTkIcS/bQQDRkVMSJf/ZIzLL20qKXjwzQnvcAodkzmA==", "id"=>"1"}
-  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/users_controller.rb:30:in `destroy'
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  ↳ app/controllers/users_controller.rb:31:in `destroy'
-  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."creator_id" = ?[0m  [["creator_id", 1]]
-  ↳ app/controllers/users_controller.rb:31:in `destroy'
-  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
-  ↳ app/controllers/users_controller.rb:31:in `destroy'
-Completed 500 Internal Server Error in 82ms (ActiveRecord: 2.3ms | Allocations: 4146)
-
-
-  
-ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: events.creator_id):
-  
-app/controllers/users_controller.rb:31:in `destroy'
-Started GET "/users/new" for 127.0.0.1 at 2020-12-06 21:46:59 +0530
+Started GET "/signup" for ::1 at 2020-12-07 19:59:52 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
 Processing by UsersController#new as HTML
   Rendering users/new.html.erb within layouts/application
-  Rendered users/_form.html.erb (Duration: 1.5ms | Allocations: 409)
-  Rendered users/new.html.erb within layouts/application (Duration: 9.7ms | Allocations: 486)
-[Webpacker] Everything's up-to-date. Nothing to do
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-  Rendered layouts/_header.html.erb (Duration: 23.0ms | Allocations: 811)
-Completed 200 OK in 110ms (Views: 108.3ms | ActiveRecord: 0.3ms | Allocations: 6608)
+Started POST "/login" for ::1 at 2020-12-07 19:59:57 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"9ncR8IvL3FTtlN53y0CZbdsVBNlMxx9Oez1T5VYcSz9jv9PzP8jYeAHZhTeDqE1dGKEatoF1jyBhzBfqbJcx5w==", "email"=>"karthylock@gmail.com", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "karthylock@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 280ms (ActiveRecord: 0.4ms | Allocations: 12885)
 
 
-Started GET "/sessions/new" for 127.0.0.1 at 2020-12-06 21:47:00 +0530
+Started GET "/login" for ::1 at 2020-12-07 19:59:57 +0530
 Processing by SessionsController#new as HTML
   Rendering sessions/new.html.erb within layouts/application
-  Rendered sessions/new.html.erb within layouts/application (Duration: 22.9ms | Allocations: 486)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 157)
 [Webpacker] Everything's up-to-date. Nothing to do
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-  Rendered layouts/_header.html.erb (Duration: 14.1ms | Allocations: 817)
-Completed 200 OK in 121ms (Views: 117.2ms | ActiveRecord: 0.4ms | Allocations: 7124)
+Completed 200 OK in 2336ms (Views: 2335.6ms | ActiveRecord: 0.0ms | Allocations: 148317)
 
 
-Started POST "/sessions" for 127.0.0.1 at 2020-12-06 21:47:04 +0530
-Processing by SessionsController#create as HTML
-  Parameters: {"authenticity_token"=>"BhkXer205I0m48byJvmGdlbUo9DdkyPomr8XPlKm9pjZU31U7KrAu7Jt2ddIbMg8iRqSRJr2A7AmdVpjcUUtBg==", "session"=>{"user_name"=>"hi"}, "commit"=>"Sign in"}
-  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = ? LIMIT ?[0m  [["user_name", "hi"], ["LIMIT", 1]]
-  ↳ app/controllers/sessions_controller.rb:6:in `create'
-Redirected to http://127.0.0.1:3000/
-Completed 302 Found in 44ms (ActiveRecord: 0.6ms | Allocations: 1128)
-
-
-Started GET "/" for 127.0.0.1 at 2020-12-06 21:47:05 +0530
-Processing by UsersController#index as HTML
-  Rendering users/index.html.erb within layouts/application
-  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
-  ↳ app/views/users/index.html.erb:1
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
-  ↳ app/views/users/index.html.erb:12
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-  Rendered users/index.html.erb within layouts/application (Duration: 45.9ms | Allocations: 2490)
+  Rendered users/_form.html.erb (Duration: 12772.5ms | Allocations: 753077)
+  Rendered users/new.html.erb within layouts/application (Duration: 12805.6ms | Allocations: 754716)
 [Webpacker] Everything's up-to-date. Nothing to do
-  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-  Rendered layouts/_header.html.erb (Duration: 4.7ms | Allocations: 649)
-  Rendered layouts/_alerts.html.erb (Duration: 9.1ms | Allocations: 105)
-Completed 200 OK in 135ms (Views: 133.2ms | ActiveRecord: 1.2ms | Allocations: 8767)
+Completed 200 OK in 13733ms (Views: 13651.5ms | ActiveRecord: 2.2ms | Allocations: 821523)
 
 
-Started GET "/" for ::1 at 2020-12-06 22:02:15 +0530
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-Processing by UsersController#index as HTML
-  Rendering users/index.html.erb within layouts/application
-  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
-  ↳ app/views/users/index.html.erb:1
-  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
-  ↳ app/views/users/index.html.erb:12
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-  Rendered users/index.html.erb within layouts/application (Duration: 66.5ms | Allocations: 2037)
+Started GET "/login" for ::1 at 2020-12-07 20:00:04 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 155)
+Started GET "/signup" for ::1 at 2020-12-07 20:00:05 +0530
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.2ms | Allocations: 687)
+  Rendered users/new.html.erb within layouts/application (Duration: 31.0ms | Allocations: 2027)
 [Webpacker] Everything's up-to-date. Nothing to do
-  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-  Rendered layouts/_header.html.erb (Duration: 5.9ms | Allocations: 765)
-Completed 200 OK in 159ms (Views: 152.8ms | ActiveRecord: 3.5ms | Allocations: 8039)
+Completed 200 OK in 1606ms (Views: 1604.5ms | ActiveRecord: 0.0ms | Allocations: 97322)
 
 
-Started GET "/events" for ::1 at 2020-12-06 22:02:23 +0530
+Started GET "/signup" for ::1 at 2020-12-07 20:00:07 +0530
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.9ms | Allocations: 687)
+  Rendered users/new.html.erb within layouts/application (Duration: 13.9ms | Allocations: 1426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1542ms (Views: 1539.4ms | ActiveRecord: 0.0ms | Allocations: 91758)
+
+
+  Rendered users/_form.html.erb (Duration: 15385.6ms | Allocations: 934994)
+  Rendered users/new.html.erb within layouts/application (Duration: 15386.6ms | Allocations: 935077)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 760ms (Views: 759.0ms | ActiveRecord: 0.0ms | Allocations: 52888)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15548ms (Views: 15546.6ms | ActiveRecord: 0.0ms | Allocations: 944517)
+
+
+Started POST "/users" for ::1 at 2020-12-07 20:00:18 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"mv51lRWvmsZBvETyEQF2900dx5Os8pZwvZz/4r74r8PoV/k3tySiZy9kBu1Q7aKJYdC3ryRLW6m/xBVLGSrZcQ==", "user"=>{"name"=>"asdf", "email"=>"abc@test.com"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:28:in `block in create'
+  [1m[36mUser Create (37.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "asdf"], ["email", "abc@test.com"], ["created_at", "2020-12-07 14:30:18.314984"], ["updated_at", "2020-12-07 14:30:18.314984"]]
+  ↳ app/controllers/users_controller.rb:28:in `block in create'
+  [1m[35m (128.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:28:in `block in create'
+Redirected to http://localhost:3000/events
+Completed 302 Found in 213ms (ActiveRecord: 165.6ms | Allocations: 3585)
+
+
+Started GET "/events" for ::1 at 2020-12-07 20:00:18 +0530
 Processing by EventsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
   Rendering events/index.html.erb within layouts/application
-  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
-  ↳ app/views/events/index.html.erb:17
-  Rendered events/index.html.erb within layouts/application (Duration: 82.4ms | Allocations: 939)
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date < '2020-12-07')[0m
+  ↳ app/views/events/index.html.erb:21
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date >= '2020-12-07')[0m
+  ↳ app/views/events/index.html.erb:55
+  Rendered events/index.html.erb within layouts/application (Duration: 112.8ms | Allocations: 8973)
 [Webpacker] Everything's up-to-date. Nothing to do
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-  Rendered layouts/_header.html.erb (Duration: 12.4ms | Allocations: 817)
-Completed 200 OK in 177ms (Views: 172.0ms | ActiveRecord: 0.7ms | Allocations: 7640)
+Completed 200 OK in 248ms (Views: 181.4ms | ActiveRecord: 2.4ms | Allocations: 20370)
 
 
-Started GET "/events/new" for ::1 at 2020-12-06 22:02:28 +0530
-Processing by EventsController#new as HTML
-  Rendering events/new.html.erb within layouts/application
-  Rendered events/_form.html.erb (Duration: 122.6ms | Allocations: 2973)
-  Rendered events/new.html.erb within layouts/application (Duration: 138.8ms | Allocations: 3299)
+Started GET "/my-events" for ::1 at 2020-12-07 20:00:26 +0530
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."creator_id" = ?[0m  [["creator_id", 1]]
+  ↳ app/views/users/show.html.erb:19
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendances" ON "events"."id" = "attendances"."attended_event_id" WHERE "attendances"."attendee_id" = ?[0m  [["attendee_id", 1]]
+  ↳ app/views/users/show.html.erb:45
+  Rendered users/show.html.erb within layouts/application (Duration: 181.4ms | Allocations: 19611)
 [Webpacker] Everything's up-to-date. Nothing to do
-  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-  Rendered layouts/_header.html.erb (Duration: 25.1ms | Allocations: 816)
-Completed 200 OK in 326ms (Views: 308.6ms | ActiveRecord: 2.2ms | Allocations: 12986)
+Completed 200 OK in 318ms (Views: 293.6ms | ActiveRecord: 2.6ms | Allocations: 27067)
 
 
-Started POST "/events" for ::1 at 2020-12-06 22:02:35 +0530
-Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"PWHoa7WC0LuiQ4eEX6DNMgwZ7XNUCJjw9qOMmtQ0Za8+LjTU7H4R+Lc1mUxJfiNplkK/7NdvBB9tnrelDxkaug==", "event"=>{"title"=>"sdf", "description"=>"gfgn", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms | Allocations: 1884)
-
-
-  
-NoMethodError (undefined method `events' for nil:NilClass):
-  
-app/controllers/events_controller.rb:28:in `create'
-Started POST "/events" for ::1 at 2020-12-06 22:04:06 +0530
-Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"PWHoa7WC0LuiQ4eEX6DNMgwZ7XNUCJjw9qOMmtQ0Za8+LjTU7H4R+Lc1mUxJfiNplkK/7NdvBB9tnrelDxkaug==", "event"=>{"title"=>"sdf", "description"=>"gfgn", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.4ms | Allocations: 1876)
-
-
-  
-NoMethodError (undefined method `events' for nil:NilClass):
-  
-app/controllers/events_controller.rb:28:in `create'
-Started POST "/events" for ::1 at 2020-12-06 22:04:37 +0530
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"PWHoa7WC0LuiQ4eEX6DNMgwZ7XNUCJjw9qOMmtQ0Za8+LjTU7H4R+Lc1mUxJfiNplkK/7NdvBB9tnrelDxkaug==", "event"=>{"title"=>"sdf", "description"=>"gfgn", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-Completed 500 Internal Server Error in 48ms (ActiveRecord: 1.6ms | Allocations: 4103)
-
-
-  
-NoMethodError (undefined method `event' for nil:NilClass):
-  
-app/controllers/events_controller.rb:28:in `create'
-Started GET "/events" for ::1 at 2020-12-06 22:06:16 +0530
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/" for ::1 at 2020-12-07 20:00:28 +0530
 Processing by EventsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
   Rendering events/index.html.erb within layouts/application
-  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
-  ↳ app/views/events/index.html.erb:17
-  Rendered events/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 1223)
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date < '2020-12-07')[0m
+  ↳ app/views/events/index.html.erb:21
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date >= '2020-12-07')[0m
+  ↳ app/views/events/index.html.erb:55
+  Rendered events/index.html.erb within layouts/application (Duration: 42.2ms | Allocations: 1317)
 [Webpacker] Everything's up-to-date. Nothing to do
-  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-  Rendered layouts/_header.html.erb (Duration: 33.0ms | Allocations: 2714)
-Completed 200 OK in 180ms (Views: 155.5ms | ActiveRecord: 4.5ms | Allocations: 10964)
+Completed 200 OK in 135ms (Views: 127.8ms | ActiveRecord: 2.3ms | Allocations: 8837)
 
 
-Started GET "/events/new" for ::1 at 2020-12-06 22:06:20 +0530
+Started GET "/events/new" for ::1 at 2020-12-07 20:00:31 +0530
 Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
   Rendering events/new.html.erb within layouts/application
-  Rendered events/_form.html.erb (Duration: 7.0ms | Allocations: 1922)
-  Rendered events/new.html.erb within layouts/application (Duration: 10.8ms | Allocations: 2004)
+  Rendered events/_form.html.erb (Duration: 104.6ms | Allocations: 4269)
+  Rendered events/new.html.erb within layouts/application (Duration: 119.1ms | Allocations: 4595)
 [Webpacker] Everything's up-to-date. Nothing to do
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-  Rendered layouts/_header.html.erb (Duration: 5.8ms | Allocations: 812)
-Completed 200 OK in 117ms (Views: 86.1ms | ActiveRecord: 3.2ms | Allocations: 11463)
+Completed 200 OK in 309ms (Views: 199.3ms | ActiveRecord: 0.4ms | Allocations: 16465)
 
 
-Started GET "/events/new" for ::1 at 2020-12-06 22:08:10 +0530
-Processing by EventsController#new as HTML
-  Rendering events/new.html.erb within layouts/application
-  Rendered events/_form.html.erb (Duration: 5.7ms | Allocations: 1864)
-  Rendered events/new.html.erb within layouts/application (Duration: 15.1ms | Allocations: 1946)
-[Webpacker] Everything's up-to-date. Nothing to do
-  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-  Rendered layouts/_header.html.erb (Duration: 27.4ms | Allocations: 815)
-Completed 200 OK in 124ms (Views: 121.7ms | ActiveRecord: 0.6ms | Allocations: 8080)
-
-
-Started POST "/events" for ::1 at 2020-12-06 22:08:16 +0530
+Started POST "/events" for ::1 at 2020-12-07 20:00:39 +0530
 Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"XTb/LfJWnAm/h60PtmhjtnfCWcL78+rgUM4smkjaT3uFPr0JWhmsZNObR567hktoZ0Nde8DI7HgwCEJo7BzRVA==", "event"=>{"title"=>"cb", "description"=>"dfh", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.4ms | Allocations: 1833)
-
-
-  
-NoMethodError (undefined method `events' for nil:NilClass):
-  
-app/controllers/events_controller.rb:28:in `create'
-Started GET "/" for 127.0.0.1 at 2020-12-06 22:11:38 +0530
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-Processing by UsersController#index as HTML
-  Rendering users/index.html.erb within layouts/application
-  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
-  ↳ app/views/users/index.html.erb:1
-  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
-  ↳ app/views/users/index.html.erb:12
-  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Parameters: {"authenticity_token"=>"DEU76otzydGUlxu07kw6x/BLCmErCEQkESdL9Rck3az4Ps0auWVZpD8QcXWFahBg0n8kGknczgtNIZMB7rjTig==", "event"=>{"title"=>"fh", "description"=>"hvjghcfx", "location"=>"hgfg", "date(1i)"=>"2020", "date(2i)"=>"12", "date(3i)"=>"7", "date(4i)"=>"14", "date(5i)"=>"30"}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-  Rendered users/index.html.erb within layouts/application (Duration: 85.3ms | Allocations: 4836)
-[Webpacker] Everything's up-to-date. Nothing to do
-  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-  Rendered layouts/_header.html.erb (Duration: 80.4ms | Allocations: 651)
-Completed 200 OK in 350ms (Views: 334.1ms | ActiveRecord: 6.8ms | Allocations: 12714)
+  ↳ app/controllers/events_controller.rb:35:in `block in create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:35:in `block in create'
+  [1m[36mEvent Create (1.9ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "location", "date", "creator_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "fh"], ["description", "hvjghcfx"], ["location", "hgfg"], ["date", "2020-12-07 14:30:00"], ["creator_id", 1], ["created_at", "2020-12-07 14:30:39.721649"], ["updated_at", "2020-12-07 14:30:39.721649"]]
+  ↳ app/controllers/events_controller.rb:35:in `block in create'
+  [1m[35m (183.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/events_controller.rb:35:in `block in create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 339ms (ActiveRecord: 186.2ms | Allocations: 6641)
 
 
-Started GET "/events" for 127.0.0.1 at 2020-12-06 22:11:45 +0530
+Started GET "/" for ::1 at 2020-12-07 20:00:40 +0530
 Processing by EventsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
   Rendering events/index.html.erb within layouts/application
-  [1m[36mEvent Load (1.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
-  ↳ app/views/events/index.html.erb:17
-  Rendered events/index.html.erb within layouts/application (Duration: 34.2ms | Allocations: 1051)
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date < '2020-12-07')[0m
+  ↳ app/views/events/index.html.erb:21
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date >= '2020-12-07')[0m
+  ↳ app/views/events/index.html.erb:55
+  Rendered events/index.html.erb within layouts/application (Duration: 54.8ms | Allocations: 1548)
 [Webpacker] Everything's up-to-date. Nothing to do
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-  Rendered layouts/_header.html.erb (Duration: 16.8ms | Allocations: 703)
-Completed 200 OK in 172ms (Views: 143.5ms | ActiveRecord: 5.4ms | Allocations: 8665)
+Completed 200 OK in 128ms (Views: 121.2ms | ActiveRecord: 1.4ms | Allocations: 18523)
 
 
-Started GET "/events/new" for 127.0.0.1 at 2020-12-06 22:11:47 +0530
-Processing by EventsController#new as HTML
-  Rendering events/new.html.erb within layouts/application
-  Rendered events/_form.html.erb (Duration: 6.8ms | Allocations: 1922)
-  Rendered events/new.html.erb within layouts/application (Duration: 9.5ms | Allocations: 2004)
-[Webpacker] Everything's up-to-date. Nothing to do
-  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-  Rendered layouts/_header.html.erb (Duration: 4.8ms | Allocations: 697)
-Completed 200 OK in 97ms (Views: 80.9ms | ActiveRecord: 1.4ms | Allocations: 11253)
-
-
-Started POST "/events" for 127.0.0.1 at 2020-12-06 22:11:52 +0530
-Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"s6MqDwCSzw3VlZ4wkHBHfPsSIebDfRBDO6U1jyN76lbbxhwxwtG53GicEtpcgaKrpOb/R84BOIAt9c4x22NuTA==", "event"=>{"title"=>"fgh", "description"=>"fgjnhg", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.4ms | Allocations: 2056)
-
-
-  
-ActiveModel::UnknownAttributeError (unknown attribute 'creator_id' for Event.):
-  
-app/controllers/events_controller.rb:28:in `create'
-Started POST "/events" for 127.0.0.1 at 2020-12-06 22:12:47 +0530
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"s6MqDwCSzw3VlZ4wkHBHfPsSIebDfRBDO6U1jyN76lbbxhwxwtG53GicEtpcgaKrpOb/R84BOIAt9c4x22NuTA==", "event"=>{"title"=>"fgh", "description"=>"fgjnhg", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-[31mUnpermitted parameters: :event_date(1i), :event_date(2i), :event_date(3i)[0m
-Completed 500 Internal Server Error in 79ms (ActiveRecord: 8.9ms | Allocations: 11251)
-
-
-  
-ActiveModel::UnknownAttributeError (unknown attribute 'creator_id' for Event.):
-  
-app/controllers/events_controller.rb:28:in `create'
-Started POST "/events" for 127.0.0.1 at 2020-12-06 22:13:51 +0530
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"s6MqDwCSzw3VlZ4wkHBHfPsSIebDfRBDO6U1jyN76lbbxhwxwtG53GicEtpcgaKrpOb/R84BOIAt9c4x22NuTA==", "event"=>{"title"=>"fgh", "description"=>"fgjnhg", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-[31mUnpermitted parameters: :event_date(1i), :event_date(2i), :event_date(3i)[0m
-Completed 500 Internal Server Error in 65ms (ActiveRecord: 5.9ms | Allocations: 11251)
-
-
-  
-ActiveModel::UnknownAttributeError (unknown attribute 'creator_id' for Event.):
-  
-app/controllers/events_controller.rb:33:in `create'
-Started POST "/events" for 127.0.0.1 at 2020-12-06 22:13:57 +0530
-Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"s6MqDwCSzw3VlZ4wkHBHfPsSIebDfRBDO6U1jyN76lbbxhwxwtG53GicEtpcgaKrpOb/R84BOIAt9c4x22NuTA==", "event"=>{"title"=>"fgh", "description"=>"fgjnhg", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-[31mUnpermitted parameters: :event_date(1i), :event_date(2i), :event_date(3i)[0m
-Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.4ms | Allocations: 1638)
-
-
-  
-ActiveModel::UnknownAttributeError (unknown attribute 'creator_id' for Event.):
-  
-app/controllers/events_controller.rb:33:in `create'
-Started POST "/events" for 127.0.0.1 at 2020-12-06 22:14:02 +0530
-Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"9loXHhRdodTDipbVK4567TLQO6oSuuLGRpfKp8EaFpKlZYVnMTXgij2lbSroe7kSJYo3Yq6aYeVqhAwRTsAs3g==", "event"=>{"title"=>"fgh", "description"=>"fgjnhg", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-[31mUnpermitted parameters: :event_date(1i), :event_date(2i), :event_date(3i)[0m
-Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.4ms | Allocations: 1610)
-
-
-  
-ActiveModel::UnknownAttributeError (unknown attribute 'creator_id' for Event.):
-  
-app/controllers/events_controller.rb:33:in `create'
-Started POST "/events" for 127.0.0.1 at 2020-12-06 22:14:44 +0530
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"9loXHhRdodTDipbVK4567TLQO6oSuuLGRpfKp8EaFpKlZYVnMTXgij2lbSroe7kSJYo3Yq6aYeVqhAwRTsAs3g==", "event"=>{"title"=>"fgh", "description"=>"fgjnhg", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-Completed 500 Internal Server Error in 113ms (ActiveRecord: 4.9ms | Allocations: 11286)
-
-
-  
-ActiveModel::UnknownAttributeError (unknown attribute 'creator_id' for Event.):
-  
-app/controllers/events_controller.rb:33:in `create'
-Started POST "/events" for 127.0.0.1 at 2020-12-06 22:14:55 +0530
-Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"9loXHhRdodTDipbVK4567TLQO6oSuuLGRpfKp8EaFpKlZYVnMTXgij2lbSroe7kSJYo3Yq6aYeVqhAwRTsAs3g==", "event"=>{"title"=>"fgh", "description"=>"fgjnhg", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.5ms | Allocations: 1674)
-
-
-  
-ActiveModel::UnknownAttributeError (unknown attribute 'creator_id' for Event.):
-  
-app/controllers/events_controller.rb:33:in `create'
-Started POST "/events" for 127.0.0.1 at 2020-12-06 22:18:06 +0530
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"9loXHhRdodTDipbVK4567TLQO6oSuuLGRpfKp8EaFpKlZYVnMTXgij2lbSroe7kSJYo3Yq6aYeVqhAwRTsAs3g==", "event"=>{"title"=>"fgh", "description"=>"fgjnhg", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-Completed 500 Internal Server Error in 203ms (ActiveRecord: 8.3ms | Allocations: 11391)
-
-
-  
-ActiveModel::UnknownAttributeError (unknown attribute 'creator_id' for Event.):
-  
-app/controllers/events_controller.rb:33:in `create'
-Started POST "/events" for 127.0.0.1 at 2020-12-06 22:18:17 +0530
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"9loXHhRdodTDipbVK4567TLQO6oSuuLGRpfKp8EaFpKlZYVnMTXgij2lbSroe7kSJYo3Yq6aYeVqhAwRTsAs3g==", "event"=>{"title"=>"fgh", "description"=>"fgjnhg", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-Completed 500 Internal Server Error in 98ms (ActiveRecord: 5.2ms | Allocations: 11331)
-
-
-  
-ActiveModel::UnknownAttributeError (unknown attribute 'creator_id' for Event.):
-  
-app/controllers/events_controller.rb:33:in `create'
-Started POST "/events" for 127.0.0.1 at 2020-12-06 22:18:22 +0530
-Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"9loXHhRdodTDipbVK4567TLQO6oSuuLGRpfKp8EaFpKlZYVnMTXgij2lbSroe7kSJYo3Yq6aYeVqhAwRTsAs3g==", "event"=>{"title"=>"fgh", "description"=>"fgjnhg", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.8ms | Allocations: 1685)
-
-
-  
-ActiveModel::UnknownAttributeError (unknown attribute 'creator_id' for Event.):
-  
-app/controllers/events_controller.rb:33:in `create'
-Started POST "/events" for 127.0.0.1 at 2020-12-06 22:18:50 +0530
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"9loXHhRdodTDipbVK4567TLQO6oSuuLGRpfKp8EaFpKlZYVnMTXgij2lbSroe7kSJYo3Yq6aYeVqhAwRTsAs3g==", "event"=>{"title"=>"fgh", "description"=>"fgjnhg", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-Completed 500 Internal Server Error in 139ms (ActiveRecord: 10.4ms | Allocations: 11364)
-
-
-  
-ActiveModel::UnknownAttributeError (unknown attribute 'creator_id' for Event.):
-  
-app/controllers/events_controller.rb:33:in `create'
-Started POST "/events" for 127.0.0.1 at 2020-12-06 22:21:00 +0530
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"9loXHhRdodTDipbVK4567TLQO6oSuuLGRpfKp8EaFpKlZYVnMTXgij2lbSroe7kSJYo3Yq6aYeVqhAwRTsAs3g==", "event"=>{"title"=>"fgh", "description"=>"fgjnhg", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-Completed 500 Internal Server Error in 183ms (ActiveRecord: 4.3ms | Allocations: 11403)
-
-
-  
-ActiveModel::UnknownAttributeError (unknown attribute 'creator_id' for Event.):
-  
-app/controllers/events_controller.rb:33:in `create'
-Started POST "/events" for 127.0.0.1 at 2020-12-06 22:36:47 +0530
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"9loXHhRdodTDipbVK4567TLQO6oSuuLGRpfKp8EaFpKlZYVnMTXgij2lbSroe7kSJYo3Yq6aYeVqhAwRTsAs3g==", "event"=>{"title"=>"fgh", "description"=>"fgjnhg", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.5ms | Allocations: 1701)
-
-
-  
-ActiveModel::UnknownAttributeError (unknown attribute 'creator_id' for Event.):
-  
-app/controllers/events_controller.rb:33:in `create'
-Started POST "/events" for 127.0.0.1 at 2020-12-06 22:37:20 +0530
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"9loXHhRdodTDipbVK4567TLQO6oSuuLGRpfKp8EaFpKlZYVnMTXgij2lbSroe7kSJYo3Yq6aYeVqhAwRTsAs3g==", "event"=>{"title"=>"fgh", "description"=>"fgjnhg", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-Completed 500 Internal Server Error in 124ms (ActiveRecord: 4.4ms | Allocations: 11406)
-
-
-  
-ActiveModel::UnknownAttributeError (unknown attribute 'creator_id' for Event.):
-  
-app/controllers/events_controller.rb:33:in `create'
-Started POST "/events" for 127.0.0.1 at 2020-12-06 22:37:54 +0530
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"9loXHhRdodTDipbVK4567TLQO6oSuuLGRpfKp8EaFpKlZYVnMTXgij2lbSroe7kSJYo3Yq6aYeVqhAwRTsAs3g==", "event"=>{"title"=>"fgh", "description"=>"fgjnhg", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-Completed 500 Internal Server Error in 119ms (ActiveRecord: 8.5ms | Allocations: 11297)
-
-
-  
-ActiveModel::UnknownAttributeError (unknown attribute 'creator_id' for Event.):
-  
-app/controllers/events_controller.rb:33:in `create'
-Started POST "/events" for 127.0.0.1 at 2020-12-06 22:38:32 +0530
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"9loXHhRdodTDipbVK4567TLQO6oSuuLGRpfKp8EaFpKlZYVnMTXgij2lbSroe7kSJYo3Yq6aYeVqhAwRTsAs3g==", "event"=>{"title"=>"fgh", "description"=>"fgjnhg", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-Completed 500 Internal Server Error in 82ms (ActiveRecord: 6.3ms | Allocations: 11316)
-
-
-  
-ActiveModel::UnknownAttributeError (unknown attribute 'creator_id' for Event.):
-  
-app/controllers/events_controller.rb:27:in `create'
-Started POST "/events" for 127.0.0.1 at 2020-12-06 22:39:05 +0530
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"9loXHhRdodTDipbVK4567TLQO6oSuuLGRpfKp8EaFpKlZYVnMTXgij2lbSroe7kSJYo3Yq6aYeVqhAwRTsAs3g==", "event"=>{"title"=>"fgh", "description"=>"fgjnhg", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-Completed 500 Internal Server Error in 121ms (ActiveRecord: 12.9ms | Allocations: 11297)
-
-
-  
-ActiveModel::UnknownAttributeError (unknown attribute 'creator_id' for Event.):
-  
-app/controllers/events_controller.rb:33:in `create'
-Started POST "/events" for 127.0.0.1 at 2020-12-06 22:40:02 +0530
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"9loXHhRdodTDipbVK4567TLQO6oSuuLGRpfKp8EaFpKlZYVnMTXgij2lbSroe7kSJYo3Yq6aYeVqhAwRTsAs3g==", "event"=>{"title"=>"fgh", "description"=>"fgjnhg", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-Completed 500 Internal Server Error in 82ms (ActiveRecord: 5.0ms | Allocations: 11292)
-
-
-  
-ActiveModel::UnknownAttributeError (unknown attribute 'creator_id' for Event.):
-  
-app/controllers/events_controller.rb:33:in `create'
-Started POST "/events" for 127.0.0.1 at 2020-12-06 22:40:29 +0530
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"9loXHhRdodTDipbVK4567TLQO6oSuuLGRpfKp8EaFpKlZYVnMTXgij2lbSroe7kSJYo3Yq6aYeVqhAwRTsAs3g==", "event"=>{"title"=>"fgh", "description"=>"fgjnhg", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-Completed 500 Internal Server Error in 79ms (ActiveRecord: 5.4ms | Allocations: 11324)
-
-
-  
-ActiveModel::UnknownAttributeError (unknown attribute 'creator_id' for Event.):
-  
-app/controllers/events_controller.rb:33:in `create'
-Started POST "/events" for 127.0.0.1 at 2020-12-06 22:41:04 +0530
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"9loXHhRdodTDipbVK4567TLQO6oSuuLGRpfKp8EaFpKlZYVnMTXgij2lbSroe7kSJYo3Yq6aYeVqhAwRTsAs3g==", "event"=>{"title"=>"fgh", "description"=>"fgjnhg", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-Completed 500 Internal Server Error in 147ms (ActiveRecord: 5.2ms | Allocations: 14685)
-
-
-  
-NoMethodError (undefined method `date' for #<Event:0x000000000cea1e18>
-Did you mean?  update):
-  
-app/controllers/events_controller.rb:33:in `create'
-Started POST "/events" for 127.0.0.1 at 2020-12-06 22:41:29 +0530
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"9loXHhRdodTDipbVK4567TLQO6oSuuLGRpfKp8EaFpKlZYVnMTXgij2lbSroe7kSJYo3Yq6aYeVqhAwRTsAs3g==", "event"=>{"title"=>"fgh", "description"=>"fgjnhg", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-Completed 500 Internal Server Error in 89ms (ActiveRecord: 4.3ms | Allocations: 11371)
-
-
-  
-ActiveModel::UnknownAttributeError (unknown attribute 'creator_id' for Event.):
-  
-app/controllers/events_controller.rb:33:in `create'
-Started POST "/events" for 127.0.0.1 at 2020-12-06 22:43:45 +0530
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"9loXHhRdodTDipbVK4567TLQO6oSuuLGRpfKp8EaFpKlZYVnMTXgij2lbSroe7kSJYo3Yq6aYeVqhAwRTsAs3g==", "event"=>{"title"=>"fgh", "description"=>"fgjnhg", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-Completed 500 Internal Server Error in 68ms (ActiveRecord: 6.1ms | Allocations: 11297)
-
-
-  
-ActiveModel::UnknownAttributeError (unknown attribute 'creator_id' for Event.):
-  
-app/controllers/events_controller.rb:28:in `create'
-Started POST "/events" for 127.0.0.1 at 2020-12-06 22:45:12 +0530
-Processing by EventsController#create as HTML
-  Parameters: {"authenticity_token"=>"9loXHhRdodTDipbVK4567TLQO6oSuuLGRpfKp8EaFpKlZYVnMTXgij2lbSroe7kSJYo3Yq6aYeVqhAwRTsAs3g==", "event"=>{"title"=>"fgh", "description"=>"fgjnhg", "event_date(1i)"=>"2020", "event_date(2i)"=>"12", "event_date(3i)"=>"6"}, "commit"=>"Create Event"}
-  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/application_controller.rb:4:in `current_user'
-Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.7ms | Allocations: 1670)
-
-
-  
-ActiveModel::UnknownAttributeError (unknown attribute 'creator_id' for Event.):
-  
-app/controllers/events_controller.rb:28:in `create'
