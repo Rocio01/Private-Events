@@ -20,7 +20,7 @@ Once inside the application, you have to create an account since you are a new u
 
 ## Authors
 
-👤 **Alexandre Bouhid**
+👤 **karthick**
 
 - Github: [karthick](https://github.com/karthykarthick)
 - LinkedIn: [karthick-harimoorthy](https://www.linkedin.com/in/karthick-harimoorthy/)
