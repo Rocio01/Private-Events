@@ -26,6 +26,13 @@ Once inside the application, you have to create an account since you are a new u
 - LinkedIn: [karthick-harimoorthy](https://www.linkedin.com/in/karthick-harimoorthy/)
 
 
+👤 **Rocio Martinez**
+
+- Github: [@Rocio01](https://github.com/Rocio01)
+- Twitter: [@rugiada8801](https://twitter.com/rugiada8801)
+- Linkedin: [zulma-rocio-martinez](https://www.linkedin.com/in/zulma-rocio-martinez)
+
+
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
