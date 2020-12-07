@@ -1340,3 +1340,123 @@ Processing by EventsController#index as HTML
 Completed 200 OK in 162ms (Views: 146.0ms | ActiveRecord: 3.2ms | Allocations: 10027)
 
 
+Started GET "/events" for 127.0.0.1 at 2020-12-07 11:42:57 -0500
+Started GET "/events" for 127.0.0.1 at 2020-12-07 11:42:57 -0500
+  [1m[35m (45.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+Processing by EventsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering events/index.html.erb within layouts/application
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date < '2020-12-07')[0m
+  ↳ app/views/events/index.html.erb:21
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date < '2020-12-07')[0m
+  ↳ app/views/events/index.html.erb:21
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date >= '2020-12-07')[0m
+  ↳ app/views/events/index.html.erb:55
+  Rendered events/index.html.erb within layouts/application (Duration: 142.4ms | Allocations: 9428)
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date >= '2020-12-07')[0m
+  ↳ app/views/events/index.html.erb:55
+  Rendered events/index.html.erb within layouts/application (Duration: 97.6ms | Allocations: 10179)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2653ms (Views: 2126.1ms | ActiveRecord: 43.2ms | Allocations: 51576)
+
+
+Completed 200 OK in 2563ms (Views: 2105.0ms | ActiveRecord: 3.6ms | Allocations: 51348)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-07 11:43:12 -0500
+Processing by EventsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date < '2020-12-07')[0m
+  ↳ app/views/events/index.html.erb:21
+  [1m[36mEvent Load (1.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date >= '2020-12-07')[0m
+  ↳ app/views/events/index.html.erb:55
+  Rendered events/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 1794)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 61.0ms | ActiveRecord: 1.9ms | Allocations: 9637)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-07 11:43:16 -0500
+Processing by EventsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date < '2020-12-07')[0m
+  ↳ app/views/events/index.html.erb:21
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date >= '2020-12-07')[0m
+  ↳ app/views/events/index.html.erb:55
+  Rendered events/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1788)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 54.3ms | ActiveRecord: 1.7ms | Allocations: 9630)
+
+
+Started GET "/my-events" for 127.0.0.1 at 2020-12-07 11:43:23 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Load (19.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."creator_id" = ?[0m  [["creator_id", 3]]
+  ↳ app/views/users/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:25
+  [1m[36mEvent Load (18.3ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "attendances" ON "events"."id" = "attendances"."attended_event_id" WHERE "attendances"."attendee_id" = ?[0m  [["attendee_id", 3]]
+  ↳ app/views/users/show.html.erb:45
+  Rendered users/show.html.erb within layouts/application (Duration: 1027.8ms | Allocations: 12743)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1095ms (Views: 1040.2ms | ActiveRecord: 40.5ms | Allocations: 20979)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-12-07 11:43:34 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."creator_id" = ?[0m  [["creator_id", 3]]
+  ↳ app/views/users/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:20
+  Rendered users/index.html.erb within layouts/application (Duration: 61.2ms | Allocations: 2452)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 113ms (Views: 110.0ms | ActiveRecord: 0.5ms | Allocations: 9737)
+
+
+Started GET "/events" for 127.0.0.1 at 2020-12-07 11:43:48 -0500
+Processing by EventsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date < '2020-12-07')[0m
+  ↳ app/views/events/index.html.erb:21
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date >= '2020-12-07')[0m
+  ↳ app/views/events/index.html.erb:55
+  Rendered events/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 1797)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 59.1ms | ActiveRecord: 1.1ms | Allocations: 9631)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-12-07 12:23:37 -0500
+  [1m[35m (8.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."creator_id" = ?[0m  [["creator_id", 3]]
+  ↳ app/views/users/index.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:20
+  Rendered users/index.html.erb within layouts/application (Duration: 239.9ms | Allocations: 20028)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1135ms (Views: 1048.4ms | ActiveRecord: 3.3ms | Allocations: 39173)
+
+
