@@ -1,10 +1,21 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  # get 'home/index'
-  root "users#index"
-  # get "users" => "users#index"
-  # get "users/new" => "users#new"
-  # post "users" => "users#create"
-  #  get "users/:id" => "users#show"
   resources :users
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :events
+  resources :attendances
+
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+  post '/logout' => 'sessions#destroy'
+
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
+
+  get '/my-events' => 'users#show'
+
+  get '/attendees' => 'events#show'
+
+  root 'events#index'
 end

@@ -1,24 +1,51 @@
-# README
+# Private Events Web App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The main objective of this project was to build an events application such as `EventBrite`. This was supposed to demonstrate a mastery in working with `Rails Associations`. Here, a User can be both a creator and attendee of an event and an Event has many attendees. To accomplish this `many-to-many` relationship, we had to create an inner join table called `attendance`.
 
-Things you may want to cover:
+![screenshot](./Index.png)
 
-* Ruby version
 
-* System dependencies
+## Getting Started
+- Clone the repository using `git clone git@github.com:abouhid/private-events.git`
+- Change directories into the location to which you cloned the repo using `cd`
+- Run `bundle install` and `rails db:migrate`
+- Run `rails s` to start the rails `puma` server
+- On your browser go to http://localhost:3000/
 
-* Configuration
+## Instructions
+Once inside the application, you have to create an account since you are a new user so as to be able to enjoy all that the web app has to offer. Once you've created the application, you can use the navigation links to navigate anywhere within the page.
 
-* Database creation
+## Built With
+- Ruby on Rails version 6.0.0.3
 
-* Database initialization
+## Authors
 
-* How to run the test suite
+👤 **karthick-harimoorthy**
 
-* Services (job queues, cache servers, search engines, etc.)
+- Github: [karthick](https://github.com/karthykarthick)
+- LinkedIn: [karthick-harimoorthy](https://www.linkedin.com/in/karthick-harimoorthy/)
 
-* Deployment instructions
 
-* ...
+👤 **Rocio Martinez**
+
+- Github: [@Rocio01](https://github.com/Rocio01)
+- Twitter: [@rugiada8801](https://twitter.com/rugiada8801)
+- Linkedin: [zulma-rocio-martinez](https://www.linkedin.com/in/zulma-rocio-martinez)
+
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page]().
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse
+- GitHub
+- TheOdinProject
+- Ruby on Rails :tada

@@ -1,0 +1,76 @@
+<p id="notice"><%= notice %></p>
+<h1 class="title">All Events</h1>
+<hr>
+
+<h1 class="title">Past Events</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Location</th>
+      <th>Date</th>
+            <th>Present</th>
+
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @past_events.each do |event| %>
+      <tr>
+        <td><%= event.title %></td>
+        <td><%= event.description %></td>
+        <td><%= event.location %></td>
+        <td><%= event.date %></td>
+        <% if current_user %>
+          <td><%= link_to 'Attend Event', attendances_path(event_id: event.id), method: :post %></td>
+        <% end %>
+        <td><%= link_to 'Show', event %></td>
+        <td><%= link_to 'Edit', edit_event_path(event) %></td>
+        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<h1 class="title">Upcoming Events</h1>
+
+<table class="table">
+  <thead>
+    <tr >
+      <th>Title</th>
+      <th>Description</th>
+      <th>Location</th>
+      <th>Date</th>
+      <th>Present</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @upcoming_events.each do |event| %>
+      <tr>
+        <td><%= event.title %></td>
+        <td><%= event.description %></td>
+        <td><%= event.location %></td>
+        <td><%= event.date %></td>
+        <% if current_user %>
+          <td><%= link_to 'Attend Event', attendances_path(event.id), method: :post %></td>
+        <% end %>
+        <td><%= link_to 'Show', event %></td>
+        <td><%= link_to 'Edit', edit_event_path(event) %></td>
+        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% if current_user %>
+<%= link_to 'New Event', new_event_path, class: "button is-info is-inverted" %>
+<%= link_to 'Your Events', '/my-events', class: "button is-info is-inverted" %>
+
+<% end%>
