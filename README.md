@@ -22,14 +22,8 @@ Once inside the application, you have to create an account since you are a new u
 
 👤 **Alexandre Bouhid**
 
-- Github: [@abouhid](https://github.com/abouhid)
-- LinkedIn: [Alexandre Bouhid](https://www.linkedin.com/in/alexandrebouhid/)
-
-👤 **Kelyn Paul Njeri**
-
-- Github: [@KelynPNjeri](https://github.com/KelynPNjeri)
-- Twitter: [@KelynNjeri](https://twitter.com/kelyn-njeri)
-- Linkedin: [Kelyn Paul](https://linkedin.com/kelyn-paul)
+- Github: [karthick](https://github.com/karthykarthick)
+- LinkedIn: [karthick-harimoorthy](https://www.linkedin.com/in/karthick-harimoorthy/)
 
 
 ## 🤝 Contributing
