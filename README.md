@@ -41,11 +41,8 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Umair Arshad**
+👤 **karthick**
 
-- Github: [@umairarshadbutt](https://github.com/umairarshadbutt)
-- Twitter: [@its_UmairArshad](https://twitter.com/its_UmairArshad)
-- Linkedin: [umair-arshad-butt](https://www.linkedin.com/in/umair-arshad-butt/)
 
 
 ## 🤝 Contributing
