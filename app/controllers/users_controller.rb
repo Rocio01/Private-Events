@@ -1,74 +1,45 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: %i[show edit update destroy]
-
-  # GET /users
-  # GET /users.json
   def index
     @users = User.all
   end
 
-  # GET /users/1
-  # GET /users/1.json
-  def show; end
-
-  # GET /users/new
   def new
-    @user = User.new
+    if session[:username].nil?
+      @user = User.new
+    else
+      @user = User.find(session[:id])
+      redirect_to user_path(@user)
+    end
   end
 
-  # GET /users/1/edit
-  def edit; end
-
-  # POST /users
-  # POST /users.json
   def create
     @user = User.new(user_params)
-
-    respond_to do |format|
-      if @user.save
-        session[:user_id] = @user.id
-        format.html { redirect_to events_path, notice: 'User was successfully created.' }
-        format.json { render :show, status: :created, location: @user }
-      else
-        format.html { render :new }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
+    if @user.save
+      flash[:notice] = "Profile for #{@user.full_name} Created successfully"
+      session[:user_id] = @user.id.to_s
+      session[:username] = @user.username
+      redirect_to user_path(@user)
+    else
+      flash[:notice] = 'Something went wrong'
+      render('new')
     end
   end
 
-  # PATCH/PUT /users/1
-  # PATCH/PUT /users/1.json
-  def update
-    respond_to do |format|
-      if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
-        format.json { render :show, status: :ok, location: @user }
-      else
-        format.html { render :edit }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
-    end
+  def show
+    @user = User.find(params[:id])
+    @created_events = @user.created_events
+    @upcoming_events = @user.upcoming_created_events
+    @previous_events = @user.previous_created_events
   end
 
-  # DELETE /users/1
-  # DELETE /users/1.json
   def destroy
-    @user.destroy
-    respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    session.delete(:id)
+    @current_user = nil
   end
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
-  def set_user
-    @user = current_user
-  end
-
-  # Only allow a list of trusted parameters through.
   def user_params
-    params.require(:user).permit(:name, :email)
+    params.require(:user).permit(:full_name, :username, :email)
   end
 end
