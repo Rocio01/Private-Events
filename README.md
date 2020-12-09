@@ -41,8 +41,17 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **karthick**
+👤 **Karthick Moorthy**
 
+- Github: (https://github.com/karthykarthick)
+- Linkedin: (https://www.linkedin.com/in/karthick-harimoorthy/)
+
+
+👤 **Rocio Martinez**
+
+- Github: [@Rocio01](https://github.com/Rocio01)
+- Twitter: [@rugiada8801](https://twitter.com/rugiada8801)
+- Linkedin: [zulma-rocio-martinez](https://www.linkedin.com/in/zulma-rocio-martinez)
 
 
 ## 🤝 Contributing
