@@ -1,13 +1,16 @@
 require 'rails_helper'
-
 RSpec.describe User, type: :model do
-  describe 'validations' do
-    it { should validate_presence_of(:name) }
-    it { should validate_presence_of(:email) }
+  user = User.new
+  it 'full_name should be present' do
+    user.full_name = nil
+    expect(user).to_not be_valid
   end
-  describe 'associations' do
-    it { should have_many(:events) }
-    it { should have_many(:attendances) }
-    it { should have_many(:attended_events) }
+  it 'username should be present' do
+    user.username = nil
+    expect(user).to_not be_valid
+  end
+  it 'email should be present' do
+    user.email = nil
+    expect(user).to_not be_valid
   end
 end
