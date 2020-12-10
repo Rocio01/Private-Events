@@ -12,9 +12,8 @@ var _actioncable = require("@rails/actioncable");
 var _default = (0, _actioncable.createConsumer)();
 
 exports["default"] = _default;
-
-function DisableButton(b) {
-  b.disabled = true;
-  b.value = 'Submitting';
-  b.form.submit();
-}
+$(document).ready(function () {
+  $('a[disabled=disabled]').click(function (event) {
+    event.preventDefault(); // Prevent link from following its href
+  });
+});

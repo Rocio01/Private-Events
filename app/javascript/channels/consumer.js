@@ -4,9 +4,8 @@
 import { createConsumer } from "@rails/actioncable"
 
 export default createConsumer()
-function DisableButton(b)
-{
-   b.disabled = true;
-   b.value = 'Submitting';
-   b.form.submit();
-}
+$(document).ready(function() {
+    $('a[disabled=disabled]').click(function(event){
+        event.preventDefault(); // Prevent link from following its href
+    });
+});

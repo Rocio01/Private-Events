@@ -16,4 +16,4 @@
 <% end %>
 
 <%= link_to 'Back', events_path %>
-  <%= link_to 'Event To Attend', attend_event_path(@event),method: :post%>
+<%= link_to 'Event Too attend', attend_event_path(@event),method: :post, :disabled => true %>
