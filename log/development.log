@@ -205,3 +205,165 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 119ms (Views: 116.4ms | ActiveRecord: 0.0ms | Allocations: 5936)
 
 
+Started GET "/" for 127.0.0.1 at 2020-12-10 20:19:11 +0530
+  [1m[35m (16.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 14.3ms | Allocations: 426)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in C:/Users/conne/OneDrive/Desktop/Private-Eventss/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.2
+Time: 2010ms
+Built at: 10/12/2020 8:19:21 pm
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 500 Internal Server Error in 9204ms (ActiveRecord: 0.0ms | Allocations: 177922)
+
+
+  
+ActionView::Template::Error (Missing partial helpers/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "C:/Users/conne/OneDrive/Desktop/Private-Eventss/app/views"
+  * "C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/actiontext-6.0.3.3/app/views"
+  * "C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/actionmailbox-6.0.3.3/app/views"
+):
+    13:   </head>
+    14: 
+    15:   <body>
+    16:   <%= render 'helpers/header' %>
+    17:     <p class="flash"><%= flash.notice %></p>
+    18:     <%= yield %>
+    19:   </body>
+  
+app/views/layouts/application.html.erb:16
+Started GET "/" for ::1 at 2020-12-10 20:19:47 +0530
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 2.3ms | Allocations: 216)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in C:/Users/conne/OneDrive/Desktop/Private-Eventss/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.2
+Time: 2335ms
+Built at: 10/12/2020 8:19:55 pm
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layouts/_header.html.erb (Duration: 52.3ms | Allocations: 205)
+Completed 200 OK in 7487ms (Views: 7481.4ms | ActiveRecord: 0.0ms | Allocations: 127082)
+
+
+Started GET "/" for ::1 at 2020-12-10 20:20:04 +0530
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.3ms | Allocations: 76)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 9)
+Completed 200 OK in 90ms (Views: 88.4ms | ActiveRecord: 0.0ms | Allocations: 4783)
+
+
+Started GET "/login" for ::1 at 2020-12-10 20:25:07 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 337.5ms | Allocations: 3399)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 10)
+Completed 200 OK in 417ms (Views: 409.3ms | ActiveRecord: 0.0ms | Allocations: 8568)
+
+
+Started GET "/users/new" for ::1 at 2020-12-10 20:25:09 +0530
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_new.html.erb (Duration: 40.6ms | Allocations: 1308)
+  Rendered users/new.html.erb within layouts/application (Duration: 51.6ms | Allocations: 1586)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 9)
+Completed 200 OK in 247ms (Views: 111.7ms | ActiveRecord: 1.9ms | Allocations: 13140)
+
+
+Started GET "/users/new" for ::1 at 2020-12-10 20:27:52 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_new.html.erb (Duration: 5.5ms | Allocations: 885)
+  Rendered users/new.html.erb within layouts/application (Duration: 16.7ms | Allocations: 945)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 9)
+Completed 200 OK in 121ms (Views: 93.6ms | ActiveRecord: 4.0ms | Allocations: 11317)
+
+
+Started GET "/welcome" for ::1 at 2020-12-10 20:28:07 +0530
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.4ms | Allocations: 77)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 10)
+Completed 200 OK in 93ms (Views: 91.3ms | ActiveRecord: 0.0ms | Allocations: 5246)
+
+
+Started GET "/users/new" for ::1 at 2020-12-10 20:28:09 +0530
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_new.html.erb (Duration: 1.9ms | Allocations: 818)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1329)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 8)
+Completed 200 OK in 133ms (Views: 131.8ms | ActiveRecord: 0.0ms | Allocations: 17192)
+
+
+Started GET "/login" for ::1 at 2020-12-10 20:28:10 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 737)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 9)
+Completed 200 OK in 67ms (Views: 65.7ms | ActiveRecord: 0.0ms | Allocations: 5778)
+
+
+Started GET "/users/new" for ::1 at 2020-12-10 20:28:11 +0530
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_new.html.erb (Duration: 3.5ms | Allocations: 818)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 878)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 8)
+Completed 200 OK in 128ms (Views: 127.3ms | ActiveRecord: 0.0ms | Allocations: 15901)
+
+
+Started GET "/login" for ::1 at 2020-12-10 20:28:12 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 349)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 9)
+Completed 200 OK in 68ms (Views: 67.2ms | ActiveRecord: 0.0ms | Allocations: 5375)
+
+
+Started GET "/users/new" for ::1 at 2020-12-10 20:28:12 +0530
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_new.html.erb (Duration: 5.6ms | Allocations: 818)
+  Rendered users/new.html.erb within layouts/application (Duration: 68.4ms | Allocations: 7031)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 8)
+Completed 200 OK in 180ms (Views: 179.1ms | ActiveRecord: 0.0ms | Allocations: 12314)
+
+
