@@ -1,2 +1,77 @@
- <%= render 'show'%>
 
+<% if current_user? %>
+  <nav class="navbar navbar-expand-lg">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <div class="navbar-brand"><%= link_to "All events", events_path %></div>
+      <div class="navbar-brand"><%= link_to "New event", new_event_path %></div>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      </ul>
+      <span class="form-inline my-2 my-lg-0">
+        <div class="navbar-brand"><%= link_to "#{current_user.full_name}", user_path(current_user) %></div>
+        <span class="btn btn-outline-success my-2 my-sm-0">  <%= link_to "Log Out", '/logout', method: :delete %></span> 
+      </span>
+    </div>
+  </nav>
+<% end %>
+
+
+
+<% if check %>
+  <h3 class="text-center">User profile page for: <%= @user.full_name %></h3>
+    <div class="container">
+    <p>Created events: </p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Event name</th>
+          <th>Description</th>
+          <th>Event Date</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr><% @created_events.each do |e| %></tr>
+            <td><%= e.title %></td>
+            <td><%= e.description %></td>
+            <td><%= e.event_date %></td>
+            <% end %>
+      </tbody>
+    </table>
+    <p>Upcoming events:</p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Event name</th>
+            <th>Description</th>
+            <th>Event Date</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr><% @upcoming_events.each do |e| %></tr>
+              <td><%= e.title %></td>
+              <td><%= e.description %></td>
+              <td><%= e.event_date %></td>
+            <% end %>
+        </tbody>
+      </table>
+    <p>Previous events: </p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Event name</th>
+            <th>Place</th>
+            <th>Event Date</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr><% @previous_events.each do |e| %></tr>
+              <td><%= e.title %></td>
+              <td><%= e.description %></td>
+              <td><%= e.event_date %></td>
+            <% end %>
+        </tbody>
+      </table>
+  </div>
+<% end %>

@@ -4,3 +4,9 @@
 import { createConsumer } from "@rails/actioncable"
 
 export default createConsumer()
+function DisableButton(b)
+{
+   b.disabled = true;
+   b.value = 'Submitting';
+   b.form.submit();
+}

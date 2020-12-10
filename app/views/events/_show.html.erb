@@ -13,6 +13,7 @@
       <% end %>
     </ul>
   <% end %>
-
-  <%= link_to 'Event To Attend', attend_event_path(@event), method: :post %>
 <% end %>
+
+<%= link_to 'Back', events_path %>
+  <%= link_to 'Event To Attend', attend_event_path(@event),method: :post%>
