@@ -1,22 +1,32 @@
-
-<% if current_user? %>
-  <nav class="navbar navbar-expand-lg">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <div class="navbar-brand"><%= link_to "All events", events_path %></div>
-      <div class="navbar-brand"><%= link_to "New event", new_event_path %></div>
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      </ul>
-      <span class="form-inline my-2 my-lg-0">
-        <div class="navbar-brand"><%= link_to "#{current_user.full_name}", user_path(current_user) %></div>
-        <span class="btn btn-outline-success my-2 my-sm-0">  <%= link_to "Log Out", '/logout', method: :delete %></span> 
-      </span>
-    </div>
-  </nav>
-<% end %>
-
-
-
-<%= render 'index'%>
+<div class = 'container my-3'>
+  <h1 class = 'font-weight:bolder'>Upcoming events</h1>
+  <div class = 'row'>
+    <% @upcoming_events.each do |event| %>
+      <div class="card col-3 bg-info text-white font-weight:bolder mt-2" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= event.name %></h5>
+          <h6 class="card-subtitle mb-2"><%= event.date %></h6>
+          <p class="card-text"><%= event.description %></p>
+          <% if logged_in?%>
+            <%= render 'attendees/attendence_form', event: event%>
+          <% end %>
+          <%= link_to 'Show', event, class: 'btn btn-primary' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <hr>
+  <h1>Past events</h1>
+  <div class = 'row'>
+    <% @past_events.each do |event| %>
+      <div class="card col-3 bg-info text-white font-weight:bolder" style="width: 16rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= event.name %></h5>
+          <h6 class="card-subtitle mb-2"><%= event.date %></h6>
+          <p class="card-text"><%= event.description %></p>
+          <%= link_to 'Show', event, class: 'btn btn-primary' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

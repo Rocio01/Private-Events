@@ -1,9 +1,13 @@
 module UsersHelper
-  def validate
-    return true if current_user.nil? && !current_user?
+  def past_attended_events
+    current_user.attended_events.where('date <= ?', Date.today)
   end
 
-  def check
-    return true if current_user?
+  def future_events
+    current_user.attended_events.where('date > ?', Date.today)
+  end
+
+  def capitalize_user_name
+    current_user.user_name.capitalize
   end
 end

@@ -1,22 +1,16 @@
 
-<% if current_user? %>
-  <nav class="navbar navbar-expand-lg">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <div class="navbar-brand"><%= link_to "All events", events_path %></div>
-      <div class="navbar-brand"><%= link_to "New event", new_event_path %></div>
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      </ul>
-      <span class="form-inline my-2 my-lg-0">
-        <div class="navbar-brand"><%= link_to "#{current_user.full_name}", user_path(current_user) %></div>
-        <span class="btn btn-outline-success my-2 my-sm-0">  <%= link_to "Log Out", '/logout', method: :delete %></span> 
-      </span>
-    </div>
-  </nav>
+<h1 class = 'text-center mt-5 font-weight-bolder'>Create an Event</h1>
+<div class = 'd-flex justify-content-center'>
+<%= form_with(model: @event, local: true) do |f|%>
+  <%= f.label :name, class: 'font-weight-bolder mb-2'%>
+  <%= f.text_field :name, class: 'mb-2'%><br>
+  <%= f.label :date, class: 'mb-2 font-weight-bolder'%>
+   <h3>Format: 'yyyy-mm-dd'</h3>
+   <%= f.text_field :date %>
+   <%= f.label :description, class: 'my-2 font-weight-bolder'%>
+  <%= f.text_field :description %><br>
+  <div class = 'd-flex justify-content-center mt-3'>
+  <%= f.submit "Submit", class: 'btn btn-primary font-weight-bolder' %>
+  </div>
 <% end %>
-
-
-
-<%= render 'new'%>
+<div>

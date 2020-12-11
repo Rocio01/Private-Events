@@ -4,8 +4,3 @@
 import { createConsumer } from "@rails/actioncable"
 
 export default createConsumer()
-$(document).ready(function() {
-    $('a[disabled=disabled]').click(function(event){
-        event.preventDefault(); // Prevent link from following its href
-    });
-});

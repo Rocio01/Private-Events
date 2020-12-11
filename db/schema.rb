@@ -10,33 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_26_171257) do
+ActiveRecord::Schema.define(version: 2020_11_30_090209) do
 
-  create_table "attendances", force: :cascade do |t|
-    t.integer "attendee_id"
-    t.integer "attended_event_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["attended_event_id"], name: "index_attendances_on_attended_event_id"
-    t.index ["attendee_id"], name: "index_attendances_on_attendee_id"
+  create_table "event_attendences", force: :cascade do |t|
+    t.integer "attended_event_id", null: false
+    t.integer "event_attendence_id", null: false
+    t.index ["attended_event_id"], name: "index_event_attendences_on_attended_event_id"
+    t.index ["event_attendence_id"], name: "index_event_attendences_on_event_attendence_id"
   end
 
   create_table "events", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.date "event_date"
-    t.integer "creator_id"
+    t.string "date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.integer "creator_id", null: false
+    t.string "description"
     t.index ["creator_id"], name: "index_events_on_creator_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "full_name"
-    t.string "username"
-    t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "user_name"
   end
 
 end
