@@ -1,4 +1,3 @@
-
 <div class = 'container my-3'>
   <h1 class = 'font-weight:bolder'>Upcoming events</h1>
   <div class = 'row'>
@@ -8,9 +7,11 @@
           <h5 class="card-title"><%= event.name %></h5>
           <h6 class="card-subtitle mb-2"><%= event.date %></h6>
           <p class="card-text"><%= event.description %></p>
-          <% if logged_in?%>
-            <%= render 'attendees/attendence_form', event: event%>
-          <% end %>
+
+            <% if logged_in? %> 
+              <%= render 'attendees/attendence_form', event: event  %>
+            <% end %>  
+          
           <%= link_to 'Show', event, class: 'btn btn-primary' %>
         </div>
       </div>
@@ -31,4 +32,3 @@
     <% end %>
   </div>
 </div>
-
