@@ -17,6 +17,10 @@
   font-weight: bolder;
 }
 
+body{
+  background-color: gray;
+}
+
 .navbar-nav .nav-item .nav-link {
   font-weight: bolder;
   font-size: 20px;
@@ -25,7 +29,7 @@
 
 input[type=text],
 input[type=email] {
-  color: white;
+  color: black;
   font-size: 40px;
   font-weight: bold;
   border: none;
