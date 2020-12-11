@@ -6,10 +6,11 @@ ruby '2.7.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 # Use sqlite3 as the database for Active Record
+gem 'rubocop', '~> 1.6', '>= 1.6.1'
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
-gem 'tzinfo-data', '~> 1.2020', '>= 1.2020.4'
 gem 'puma', '~> 4.1'
+gem 'tzinfo-data', '~> 1.2020', '>= 1.2020.4'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
