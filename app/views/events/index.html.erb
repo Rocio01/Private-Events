@@ -8,7 +8,9 @@
           <h6 class="card-subtitle mb-2"><%= event.date %></h6>
           <p class="card-text"><%= event.description %></p>
 
-           <%= logged_in %>  
+            <% if logged_in? %> 
+              <%= render 'attendees/attendence_form', event: event  %>
+            <% end %>  
           
           <%= link_to 'Show', event, class: 'btn btn-primary' %>
         </div>
