@@ -3122,3 +3122,884 @@ Completed 200 OK in 652ms (Views: 615.7ms | ActiveRecord: 13.1ms | Allocations: 
 >>>>>>> f79b32fef5188f6a219dca4702c4a643c515c37b
 
 
+Started GET "/" for ::1 at 2020-12-12 10:12:56 +0530
+  [1m[35m (83.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date >= '2020-12-12')[0m
+  ↳ app/views/events/index.html.erb:4
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mEvent Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "events" INNER JOIN "event_attendences" ON "events"."id" = "event_attendences"."attended_event_id" WHERE "event_attendences"."event_attendence_id" = ? AND "events"."id" = ? LIMIT ?[0m  [["event_attendence_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/views/attendees/_attendence_form.html.erb:1
+  Rendered attendees/_attendence_form.html.erb (Duration: 353.2ms | Allocations: 8088)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mEvent Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "events" INNER JOIN "event_attendences" ON "events"."id" = "event_attendences"."attended_event_id" WHERE "event_attendences"."event_attendence_id" = ? AND "events"."id" = ? LIMIT ?[0m  [["event_attendence_id", 2], ["id", 3], ["LIMIT", 1]]
+  ↳ app/views/attendees/_attendence_form.html.erb:1
+  Rendered attendees/_attendence_form.html.erb (Duration: 71.9ms | Allocations: 3787)
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date < '2020-12-12')[0m
+  ↳ app/views/events/index.html.erb:23
+  Rendered events/index.html.erb within layouts/application (Duration: 639.7ms | Allocations: 28172)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+Completed 200 OK in 2042ms (Views: 1772.3ms | ActiveRecord: 47.5ms | Allocations: 99945)
+
+
+Started DELETE "/logout" for ::1 at 2020-12-12 10:14:02 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NP1eNHzL6Ss3VtYuWAIi59s/qu/Ldlf0j7ehMuqu1/+NmpYCMd3hrL5piBnOQRb7DMHQ0l92nMliug6l9e0XMw=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 58ms (ActiveRecord: 0.0ms | Allocations: 779)
+
+
+Started GET "/" for ::1 at 2020-12-12 10:14:02 +0530
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date >= '2020-12-12')[0m
+  ↳ app/views/events/index.html.erb:4
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date < '2020-12-12')[0m
+  ↳ app/views/events/index.html.erb:23
+  Rendered events/index.html.erb within layouts/application (Duration: 145.6ms | Allocations: 1937)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 213ms (Views: 210.2ms | ActiveRecord: 1.1ms | Allocations: 12059)
+
+
+Started GET "/" for ::1 at 2020-12-12 10:14:06 +0530
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date >= '2020-12-12')[0m
+  ↳ app/views/events/index.html.erb:4
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date < '2020-12-12')[0m
+  ↳ app/views/events/index.html.erb:23
+  Rendered events/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 191ms (Views: 188.3ms | ActiveRecord: 0.9ms | Allocations: 8988)
+
+
+Started GET "/" for ::1 at 2020-12-12 10:14:07 +0530
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date >= '2020-12-12')[0m
+  ↳ app/views/events/index.html.erb:4
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date < '2020-12-12')[0m
+  ↳ app/views/events/index.html.erb:23
+  Rendered events/index.html.erb within layouts/application (Duration: 38.9ms | Allocations: 1435)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 133ms (Views: 129.7ms | ActiveRecord: 1.1ms | Allocations: 8643)
+
+
+Started GET "/" for ::1 at 2020-12-12 10:14:08 +0530
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date >= '2020-12-12')[0m
+  ↳ app/views/events/index.html.erb:4
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date < '2020-12-12')[0m
+  ↳ app/views/events/index.html.erb:23
+  Rendered events/index.html.erb within layouts/application (Duration: 20.4ms | Allocations: 1426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 101ms (Views: 98.0ms | ActiveRecord: 1.4ms | Allocations: 8969)
+
+
+Started GET "/login" for ::1 at 2020-12-12 10:18:24 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 286.2ms | Allocations: 19831)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 411ms (Views: 390.6ms | ActiveRecord: 0.0ms | Allocations: 29707)
+
+
+Started POST "/login" for ::1 at 2020-12-12 10:18:28 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"xMpYb5tLUOU+6tWlTz6WV8xALaK/jSjZvh/nbxTpKYlnLApt46TiS4eLXSxemQ02ZnRe3p1snD8rh2yCW3VBRw==", "session"=>{"user_name"=>"hi"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = ? LIMIT ?[0m  [["user_name", "hi"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 58ms (ActiveRecord: 0.5ms | Allocations: 1272)
+
+
+Started GET "/users/2" for ::1 at 2020-12-12 10:18:28 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mEvent Exists? (13.2ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."creator_id" = ? LIMIT ?[0m  [["creator_id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mEvent Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "events" INNER JOIN "event_attendences" ON "events"."id" = "event_attendences"."attended_event_id" WHERE "event_attendences"."event_attendence_id" = ? LIMIT ?[0m  [["event_attendence_id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "event_attendences" ON "events"."id" = "event_attendences"."attended_event_id" WHERE "event_attendences"."event_attendence_id" = ? AND (date <= '2020-12-12')[0m  [["event_attendence_id", 2]]
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE Event Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "events" INNER JOIN "event_attendences" ON "events"."id" = "event_attendences"."attended_event_id" WHERE "event_attendences"."event_attendence_id" = ? LIMIT ?[0m  [["event_attendence_id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:33
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "event_attendences" ON "events"."id" = "event_attendences"."attended_event_id" WHERE "event_attendences"."event_attendence_id" = ? AND (date > '2020-12-12')[0m  [["event_attendence_id", 2]]
+  ↳ app/views/users/show.html.erb:34
+  Rendered users/show.html.erb within layouts/application (Duration: 231.6ms | Allocations: 7958)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+Completed 200 OK in 458ms (Views: 436.9ms | ActiveRecord: 16.1ms | Allocations: 18707)
+
+
+Started GET "/events/new" for ::1 at 2020-12-12 10:18:31 +0530
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1436)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+Completed 200 OK in 191ms (Views: 181.0ms | ActiveRecord: 0.6ms | Allocations: 23348)
+
+
+Started POST "/events" for ::1 at 2020-12-12 10:18:36 +0530
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"8ap5XAK0DMJ1qJ4XECyeOhZMt/0GtB+c5w0wP59NgaVtDPiEJAe+Qhph5IjBXB3UHW2yirGrqlNcNUmSJ5rslw==", "event"=>{"name"=>"", "date"=>"sdgf", "description"=>""}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `create'
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 834)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+Completed 200 OK in 295ms (Views: 140.5ms | ActiveRecord: 0.5ms | Allocations: 26548)
+
+
+Started GET "/events" for ::1 at 2020-12-12 10:21:50 +0530
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date >= '2020-12-12')[0m
+  ↳ app/views/events/index.html.erb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mEvent Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "events" INNER JOIN "event_attendences" ON "events"."id" = "event_attendences"."attended_event_id" WHERE "event_attendences"."event_attendence_id" = ? AND "events"."id" = ? LIMIT ?[0m  [["event_attendence_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/views/attendees/_attendence_form.html.erb:1
+  Rendered attendees/_attendence_form.html.erb (Duration: 15.6ms | Allocations: 1712)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mEvent Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "events" INNER JOIN "event_attendences" ON "events"."id" = "event_attendences"."attended_event_id" WHERE "event_attendences"."event_attendence_id" = ? AND "events"."id" = ? LIMIT ?[0m  [["event_attendence_id", 2], ["id", 3], ["LIMIT", 1]]
+  ↳ app/views/attendees/_attendence_form.html.erb:1
+  Rendered attendees/_attendence_form.html.erb (Duration: 11.1ms | Allocations: 2313)
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date < '2020-12-12')[0m
+  ↳ app/views/events/index.html.erb:23
+  Rendered events/index.html.erb within layouts/application (Duration: 52.9ms | Allocations: 7154)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+Completed 200 OK in 158ms (Views: 147.7ms | ActiveRecord: 2.6ms | Allocations: 18027)
+
+
+Started GET "/events" for ::1 at 2020-12-12 10:21:53 +0530
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date >= '2020-12-12')[0m
+  ↳ app/views/events/index.html.erb:4
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mEvent Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "events" INNER JOIN "event_attendences" ON "events"."id" = "event_attendences"."attended_event_id" WHERE "event_attendences"."event_attendence_id" = ? AND "events"."id" = ? LIMIT ?[0m  [["event_attendence_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/views/attendees/_attendence_form.html.erb:1
+  Rendered attendees/_attendence_form.html.erb (Duration: 14.9ms | Allocations: 1532)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mEvent Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "events" INNER JOIN "event_attendences" ON "events"."id" = "event_attendences"."attended_event_id" WHERE "event_attendences"."event_attendence_id" = ? AND "events"."id" = ? LIMIT ?[0m  [["event_attendence_id", 2], ["id", 3], ["LIMIT", 1]]
+  ↳ app/views/attendees/_attendence_form.html.erb:1
+  Rendered attendees/_attendence_form.html.erb (Duration: 18.0ms | Allocations: 2311)
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date < '2020-12-12')[0m
+  ↳ app/views/events/index.html.erb:23
+  Rendered events/index.html.erb within layouts/application (Duration: 59.0ms | Allocations: 6463)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+Completed 200 OK in 149ms (Views: 142.3ms | ActiveRecord: 4.8ms | Allocations: 16113)
+
+
+Started GET "/events" for ::1 at 2020-12-12 10:21:54 +0530
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date >= '2020-12-12')[0m
+  ↳ app/views/events/index.html.erb:4
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mEvent Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "events" INNER JOIN "event_attendences" ON "events"."id" = "event_attendences"."attended_event_id" WHERE "event_attendences"."event_attendence_id" = ? AND "events"."id" = ? LIMIT ?[0m  [["event_attendence_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/views/attendees/_attendence_form.html.erb:1
+  Rendered attendees/_attendence_form.html.erb (Duration: 10.5ms | Allocations: 1531)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mEvent Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "events" INNER JOIN "event_attendences" ON "events"."id" = "event_attendences"."attended_event_id" WHERE "event_attendences"."event_attendence_id" = ? AND "events"."id" = ? LIMIT ?[0m  [["event_attendence_id", 2], ["id", 3], ["LIMIT", 1]]
+  ↳ app/views/attendees/_attendence_form.html.erb:1
+  Rendered attendees/_attendence_form.html.erb (Duration: 14.2ms | Allocations: 2309)
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date < '2020-12-12')[0m
+  ↳ app/views/events/index.html.erb:23
+  Rendered events/index.html.erb within layouts/application (Duration: 49.8ms | Allocations: 6460)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+Completed 200 OK in 146ms (Views: 141.5ms | ActiveRecord: 3.6ms | Allocations: 16459)
+
+
+Started GET "/events/new" for ::1 at 2020-12-12 10:21:56 +0530
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 206.8ms | Allocations: 4473)
+Completed 500 Internal Server Error in 228ms (ActiveRecord: 0.6ms | Allocations: 5701)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<h1 class = 'text-center mt-5 font-weight-bolder'>Create an Event</h1>
+<div class = 'd-flex justify-content-center'>
+<%= form_with(model: @event, local: true) do |f|%>
+  <%= f.label :name, class: 'font-weight-bolder mb-2'%>
+  <%= f.text_field :name, class: 'mb-2 border'%><br>
+  <%= f.label :date, class: 'mb-2 font-weight-bolder'%>
+   <h3>Format: 'yyyy-mm-dd'</h3>
+  
+   <%= f.text_field :date ,class: 'border', date_field("user") %>
+   <%= f.label :description, class: 'my-2 font-weight-bolder'%>
+  <%= f.text_field :description  ,class: 'border'%><br>
+  <div class = 'd-flex justify-content-center mt-3'>
+  <%= f.submit "Submit", class: 'btn btn-primary font-weight-bolder' %>
+  </div>
+<% end %>
+<div>
+):
+1:    
+2:    <h1 class = 'text-center mt-5 font-weight-bolder'>Create an Event</h1>
+3:    <div class = 'd-flex justify-content-center'>
+4:    <%= form_with(model: @event, local: true) do |f|%>
+5:      <%= f.label :name, class: 'font-weight-bolder mb-2'%>
+6:      <%= f.text_field :name, class: 'mb-2 border'%><br>
+7:      <%= f.label :date, class: 'mb-2 font-weight-bolder'%>
+8:       <h3>Format: 'yyyy-mm-dd'</h3>
+9:      
+10:       <%= f.text_field :date ,class: 'border', date_field("user") %>
+11:       <%= f.label :description, class: 'my-2 font-weight-bolder'%>
+12:      <%= f.text_field :description  ,class: 'border'%><br>
+13:      <div class = 'd-flex justify-content-center mt-3'>
+14:      <%= f.submit "Submit", class: 'btn btn-primary font-weight-bolder' %>
+15:      </div>
+16:    <% end %>
+17:    <div>
+  
+app/views/events/new.html.erb:10: syntax error, unexpected ')', expecting =>
+app/views/events/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:19: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:10: syntax error, unexpected ')', expecting =>
+app/views/events/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:19: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:10: syntax error, unexpected ')', expecting =>
+app/views/events/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:19: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:10: syntax error, unexpected ')', expecting =>
+app/views/events/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:19: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:10: syntax error, unexpected ')', expecting =>
+app/views/events/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:19: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:10: syntax error, unexpected ')', expecting =>
+app/views/events/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:19: syntax error, unexpected `end', expecting ')'
+Started GET "/events/new" for ::1 at 2020-12-12 10:21:57 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1175)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.6ms | Allocations: 2849)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<h1 class = 'text-center mt-5 font-weight-bolder'>Create an Event</h1>
+<div class = 'd-flex justify-content-center'>
+<%= form_with(model: @event, local: true) do |f|%>
+  <%= f.label :name, class: 'font-weight-bolder mb-2'%>
+  <%= f.text_field :name, class: 'mb-2 border'%><br>
+  <%= f.label :date, class: 'mb-2 font-weight-bolder'%>
+   <h3>Format: 'yyyy-mm-dd'</h3>
+  
+   <%= f.text_field :date ,class: 'border', date_field("user") %>
+   <%= f.label :description, class: 'my-2 font-weight-bolder'%>
+  <%= f.text_field :description  ,class: 'border'%><br>
+  <div class = 'd-flex justify-content-center mt-3'>
+  <%= f.submit "Submit", class: 'btn btn-primary font-weight-bolder' %>
+  </div>
+<% end %>
+<div>
+):
+1:    
+2:    <h1 class = 'text-center mt-5 font-weight-bolder'>Create an Event</h1>
+3:    <div class = 'd-flex justify-content-center'>
+4:    <%= form_with(model: @event, local: true) do |f|%>
+5:      <%= f.label :name, class: 'font-weight-bolder mb-2'%>
+6:      <%= f.text_field :name, class: 'mb-2 border'%><br>
+7:      <%= f.label :date, class: 'mb-2 font-weight-bolder'%>
+8:       <h3>Format: 'yyyy-mm-dd'</h3>
+9:      
+10:       <%= f.text_field :date ,class: 'border', date_field("user") %>
+11:       <%= f.label :description, class: 'my-2 font-weight-bolder'%>
+12:      <%= f.text_field :description  ,class: 'border'%><br>
+13:      <div class = 'd-flex justify-content-center mt-3'>
+14:      <%= f.submit "Submit", class: 'btn btn-primary font-weight-bolder' %>
+15:      </div>
+16:    <% end %>
+17:    <div>
+  
+app/views/events/new.html.erb:10: syntax error, unexpected ')', expecting =>
+app/views/events/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:19: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:10: syntax error, unexpected ')', expecting =>
+app/views/events/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:19: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:10: syntax error, unexpected ')', expecting =>
+app/views/events/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:19: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:10: syntax error, unexpected ')', expecting =>
+app/views/events/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:19: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:10: syntax error, unexpected ')', expecting =>
+app/views/events/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:19: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:10: syntax error, unexpected ')', expecting =>
+app/views/events/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:19: syntax error, unexpected `end', expecting ')'
+Started GET "/events/new" for ::1 at 2020-12-12 10:22:11 +0530
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1188)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.5ms | Allocations: 3009)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<h1 class = 'text-center mt-5 font-weight-bolder'>Create an Event</h1>
+<div class = 'd-flex justify-content-center'>
+<%= form_with(model: @event, local: true) do |f|%>
+  <%= f.label :name, class: 'font-weight-bolder mb-2'%>
+  <%= f.text_field :name, class: 'mb-2 border'%><br>
+  <%= f.label :date, class: 'mb-2 font-weight-bolder'%>
+   <h3>Format: 'yyyy-mm-dd'</h3>
+  
+   <%= f.text_field :date ,class: 'border', date_field("user", "born_on") %>
+   <%= f.label :description, class: 'my-2 font-weight-bolder'%>
+  <%= f.text_field :description  ,class: 'border'%><br>
+  <div class = 'd-flex justify-content-center mt-3'>
+  <%= f.submit "Submit", class: 'btn btn-primary font-weight-bolder' %>
+  </div>
+<% end %>
+<div>
+):
+1:    
+2:    <h1 class = 'text-center mt-5 font-weight-bolder'>Create an Event</h1>
+3:    <div class = 'd-flex justify-content-center'>
+4:    <%= form_with(model: @event, local: true) do |f|%>
+5:      <%= f.label :name, class: 'font-weight-bolder mb-2'%>
+6:      <%= f.text_field :name, class: 'mb-2 border'%><br>
+7:      <%= f.label :date, class: 'mb-2 font-weight-bolder'%>
+8:       <h3>Format: 'yyyy-mm-dd'</h3>
+9:      
+10:       <%= f.text_field :date ,class: 'border', date_field("user", "born_on") %>
+11:       <%= f.label :description, class: 'my-2 font-weight-bolder'%>
+12:      <%= f.text_field :description  ,class: 'border'%><br>
+13:      <div class = 'd-flex justify-content-center mt-3'>
+14:      <%= f.submit "Submit", class: 'btn btn-primary font-weight-bolder' %>
+15:      </div>
+16:    <% end %>
+17:    <div>
+  
+app/views/events/new.html.erb:10: syntax error, unexpected ')', expecting =>
+app/views/events/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:19: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:10: syntax error, unexpected ')', expecting =>
+app/views/events/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:19: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:10: syntax error, unexpected ')', expecting =>
+app/views/events/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:19: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:10: syntax error, unexpected ')', expecting =>
+app/views/events/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:19: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:10: syntax error, unexpected ')', expecting =>
+app/views/events/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:19: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:10: syntax error, unexpected ')', expecting =>
+app/views/events/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/events/new.html.erb:19: syntax error, unexpected `end', expecting ')'
+Started GET "/events/new" for ::1 at 2020-12-12 10:22:28 +0530
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 47.9ms | Allocations: 3208)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+Completed 200 OK in 363ms (Views: 353.4ms | ActiveRecord: 1.0ms | Allocations: 16208)
+
+
+Started GET "/events/new" for ::1 at 2020-12-12 10:23:11 +0530
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 53.1ms | Allocations: 1089)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+Completed 200 OK in 274ms (Views: 246.9ms | ActiveRecord: 0.8ms | Allocations: 13167)
+
+
+Started GET "/events/new" for ::1 at 2020-12-12 10:24:50 +0530
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 197.2ms | Allocations: 8142)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+Completed 200 OK in 360ms (Views: 344.2ms | ActiveRecord: 0.7ms | Allocations: 21217)
+
+
+Started GET "/events/new" for ::1 at 2020-12-12 10:25:17 +0530
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 43.0ms | Allocations: 1181)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 0.3ms | Allocations: 3003)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<h1 class = 'text-center mt-5 font-weight-bolder'>Create an Event</h1>
+<div class = 'd-flex justify-content-center'>
+<%= form_with(model: @event, local: true) do |f|%>
+  <%= f.label :name, class: 'font-weight-bolder mb-2'%>
+  <%= f.text_field :name, class: 'mb-2 border'%><br>
+  <%= f.label :date, class: 'mb-2 font-weight-bolder'%>
+   <h3>Format: 'yyyy-mm-dd'</h3>
+   <%= f.date_select(:dob,:start_year => 1950) , :required => true%>
+   <%= f.label :description, class: 'my-2 font-weight-bolder'%>
+  <%= f.text_field :description  ,class: 'border'%><br>
+  <div class = 'd-flex justify-content-center mt-3'>
+  <%= f.submit "Submit", class: 'btn btn-primary font-weight-bolder' %>
+  </div>
+<% end %>
+<div>
+):
+1:    
+2:    <h1 class = 'text-center mt-5 font-weight-bolder'>Create an Event</h1>
+3:    <div class = 'd-flex justify-content-center'>
+4:    <%= form_with(model: @event, local: true) do |f|%>
+5:      <%= f.label :name, class: 'font-weight-bolder mb-2'%>
+6:      <%= f.text_field :name, class: 'mb-2 border'%><br>
+7:      <%= f.label :date, class: 'mb-2 font-weight-bolder'%>
+8:       <h3>Format: 'yyyy-mm-dd'</h3>
+9:       <%= f.date_select(:dob,:start_year => 1950) , :required => true%>
+10:       <%= f.label :description, class: 'my-2 font-weight-bolder'%>
+11:      <%= f.text_field :description  ,class: 'border'%><br>
+12:      <div class = 'd-flex justify-content-center mt-3'>
+13:      <%= f.submit "Submit", class: 'btn btn-primary font-weight-bolder' %>
+14:      </div>
+15:    <% end %>
+16:    <div>
+  
+app/views/events/new.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/events/new.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/events/new.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/events/new.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/events/new.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/events/new.html.erb:9: syntax error, unexpected ',', expecting ')'
+Started GET "/events/new" for ::1 at 2020-12-12 10:25:28 +0530
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 13.0ms | Allocations: 2974)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+Completed 200 OK in 258ms (Views: 242.2ms | ActiveRecord: 2.3ms | Allocations: 26131)
+
+
+Started POST "/events" for ::1 at 2020-12-12 10:25:38 +0530
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"xPPoMdzx1LBgvnsUY8TQ5Med1SH42bCu8byaOe1fIYJ9lCAHkefcN+mBJSP1h+T4EGOvHGzZe5McsTWu8hzhTg==", "event"=>{"name"=>"", "dob(1i)"=>"2015", "dob(2i)"=>"5", "dob(3i)"=>"12", "description"=>""}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+[31mUnpermitted parameters: :dob(1i), :dob(2i), :dob(3i)[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `create'
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2711)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+Completed 200 OK in 286ms (Views: 198.0ms | ActiveRecord: 1.1ms | Allocations: 16306)
+
+
+Started POST "/events" for ::1 at 2020-12-12 10:25:43 +0530
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"YrPJfH0XbDiusdg0lG38HZqfXv4b9koTPLrX0/PrZkzb1AFKMAFkvyeOhgMCLsgBTWEkw4/2gS7Rt3hE7KimgA==", "event"=>{"name"=>"sdggf", "dob(1i)"=>"2020", "dob(2i)"=>"12", "dob(3i)"=>"12", "description"=>"dzfxhg"}, "commit"=>"Submit"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+[31mUnpermitted parameters: :dob(1i), :dob(2i), :dob(3i)[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `create'
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2705)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+Completed 200 OK in 204ms (Views: 120.5ms | ActiveRecord: 1.8ms | Allocations: 31522)
+
+
+Started POST "/events" for ::1 at 2020-12-12 10:25:47 +0530
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"7LxPmDH5XWYLMUJhX0zmqOdwbF+O47pgUy8MdFsXNyVV24eufO9V4YIOHFbJD9K0MI4WYhrjcV2+IqPjRFT36Q==", "event"=>{"name"=>"sdggf", "dob(1i)"=>"2020", "dob(2i)"=>"12", "dob(3i)"=>"12", "description"=>"dzfxhg"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+[31mUnpermitted parameters: :dob(1i), :dob(2i), :dob(3i)[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `create'
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2705)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+Completed 200 OK in 189ms (Views: 135.2ms | ActiveRecord: 0.5ms | Allocations: 15377)
+
+
+Started POST "/events" for ::1 at 2020-12-12 10:25:49 +0530
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"BVfFcNh9LlZ4IHnGNO/6vwe/mI/CEFiEWiyz2FfbSMu8MA1GlWsm0fEfJ/GirM6j0EHislYQk7m3IRxPSJiIBw==", "event"=>{"name"=>"sdggf", "dob(1i)"=>"2020", "dob(2i)"=>"12", "dob(3i)"=>"12", "description"=>"dzfxhg"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+[31mUnpermitted parameters: :dob(1i), :dob(2i), :dob(3i)[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `create'
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 2705)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+Completed 200 OK in 208ms (Views: 149.3ms | ActiveRecord: 0.6ms | Allocations: 15368)
+
+
+Started POST "/events" for ::1 at 2020-12-12 10:27:25 +0530
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"1a0bpZCGg4BoxBJQ+5BL7j5gqH7Wqjm6v3aWBj4kTKFsytOT3ZCLB+H7TGdt03/y6Z7SQ0Kq8odSezmRIWeMbQ==", "event"=>{"name"=>"sdggf", "dob(1i)"=>"2020", "dob(2i)"=>"12", "dob(3i)"=>"12", "description"=>"dzfxhg"}, "commit"=>"Submit"}
+Started DELETE "/logout" for ::1 at 2020-12-12 10:27:26 +0530
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+[31mUnpermitted parameters: :dob(1i), :dob(2i), :dob(3i)[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `create'
+  Rendering events/new.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendered events/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 3533)
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1a0bpZCGg4BoxBJQ+5BL7j5gqH7Wqjm6v3aWBj4kTKFsytOT3ZCLB+H7TGdt03/y6Z7SQ0Kq8odSezmRIWeMbQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 461)
+
+
+Started GET "/" for ::1 at 2020-12-12 10:27:26 +0530
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date >= '2020-12-12')[0m
+  ↳ app/views/events/index.html.erb:4
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (date < '2020-12-12')[0m
+  ↳ app/views/events/index.html.erb:23
+  Rendered events/index.html.erb within layouts/application (Duration: 81.3ms | Allocations: 2541)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+Completed 200 OK in 401ms (Views: 308.1ms | ActiveRecord: 0.5ms | Allocations: 31774)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 243ms (Views: 238.8ms | ActiveRecord: 1.3ms | Allocations: 18416)
+
+
+Started GET "/login" for ::1 at 2020-12-12 10:27:31 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 539)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 124ms (Views: 120.2ms | ActiveRecord: 0.0ms | Allocations: 8552)
+
+
+Started POST "/login" for ::1 at 2020-12-12 10:28:54 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Sm3m40sQWjdIM4K5yFmmhzKNtVHnrtd9S7YEl10d+/Xpi7ThM//omfFSCjDZ/j3mmLnGLcVPY5veLo96EoGTOw==", "session"=>{"user_name"=>"hi"}, "commit"=>"Submit"}
+  [1m[36mUser Load (18.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = ? LIMIT ?[0m  [["user_name", "hi"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 57ms (ActiveRecord: 18.9ms | Allocations: 2950)
+
+
+Started GET "/users/2" for ::1 at 2020-12-12 10:28:55 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mEvent Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."creator_id" = ? LIMIT ?[0m  [["creator_id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mEvent Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "events" INNER JOIN "event_attendences" ON "events"."id" = "event_attendences"."attended_event_id" WHERE "event_attendences"."event_attendence_id" = ? LIMIT ?[0m  [["event_attendence_id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "event_attendences" ON "events"."id" = "event_attendences"."attended_event_id" WHERE "event_attendences"."event_attendence_id" = ? AND (date <= '2020-12-12')[0m  [["event_attendence_id", 2]]
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE Event Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "events" INNER JOIN "event_attendences" ON "events"."id" = "event_attendences"."attended_event_id" WHERE "event_attendences"."event_attendence_id" = ? LIMIT ?[0m  [["event_attendence_id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:33
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "event_attendences" ON "events"."id" = "event_attendences"."attended_event_id" WHERE "event_attendences"."event_attendence_id" = ? AND (date > '2020-12-12')[0m  [["event_attendence_id", 2]]
+  ↳ app/views/users/show.html.erb:34
+  Rendered users/show.html.erb within layouts/application (Duration: 294.5ms | Allocations: 7571)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+Completed 200 OK in 524ms (Views: 495.4ms | ActiveRecord: 3.3ms | Allocations: 18427)
+
+
+Started GET "/events/new" for ::1 at 2020-12-12 10:28:58 +0530
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2690)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+Completed 200 OK in 305ms (Views: 292.5ms | ActiveRecord: 0.5ms | Allocations: 12859)
+
+
+Started POST "/events" for ::1 at 2020-12-12 10:29:04 +0530
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"ESAFuze1BF5E/hiMKV+AfDj2vAwpBdVCKMAUGFmB9h6NhoRjEQa23is3YhP4LwOSM9e5e54aYI2T+G214VabLA==", "event"=>{"name"=>"fxb", "dob(1i)"=>"2020", "dob(2i)"=>"12", "dob(3i)"=>"12", "description"=>"fxb"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+[31mUnpermitted parameters: :dob(1i), :dob(2i), :dob(3i)[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `create'
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 2705)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+Completed 200 OK in 280ms (Views: 182.6ms | ActiveRecord: 0.5ms | Allocations: 26766)
+
+

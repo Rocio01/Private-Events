@@ -2,7 +2,7 @@
   <h1 class = 'font-weight:bolder'>Upcoming events</h1>
   <div class = 'row'>
     <% @upcoming_events.each do |event| %>
-      <div class="card col-3 bg-info text-white font-weight:bolder mt-2" style="width: 18rem;">
+      <div class="card col-3 bg-info text-white font-weight:bolder mt-2">
         <div class="card-body">
           <h5 class="card-title"><%= event.name %></h5>
           <h6 class="card-subtitle mb-2"><%= event.date %></h6>
@@ -21,7 +21,7 @@
   <h1>Past events</h1>
   <div class = 'row'>
     <% @past_events.each do |event| %>
-      <div class="card col-3 bg-info text-white font-weight:bolder" style="width: 16rem;">
+      <div class="card col-3 bg-info text-white font-weight:bolder">
         <div class="card-body">
           <h5 class="card-title"><%= event.name %></h5>
           <h6 class="card-subtitle mb-2"><%= event.date %></h6>
