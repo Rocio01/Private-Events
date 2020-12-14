@@ -5,8 +5,7 @@
   <%= f.label :name, class: 'font-weight-bolder mb-2'%>
   <%= f.text_field :name, class: 'mb-2 border'%><br>
   <%= f.label :date, class: 'mb-2 font-weight-bolder'%>
-   <h3>Format: 'yyyy-mm-dd'</h3>
-   <%= f.date_select(:dob,:start_year => 1950) %>
+  <%= f.date_field :date, class: 'mb-2 border' %>
    <%= f.label :description, class: 'my-2 font-weight-bolder'%>
   <%= f.text_field :description  ,class: 'border'%><br>
   <div class = 'd-flex justify-content-center mt-3'>
