@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'events#index'
+  get 'home/index'
+  root 'home#index'
   resources :users, only: [:new, :create, :show, :index]
   resources :events, only:[:new, :create, :show, :index]
   resources :attendees, only:[:create]
